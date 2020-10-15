@@ -1,4 +1,7 @@
 package Basics_of_software_code_development.Branching;
 
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }

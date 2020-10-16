@@ -15,7 +15,7 @@ public class Main {
        // System.out.println(Task4.changePartsOfNumber(123.456));
 
         //Task5
-       // System.out.println(Task5.transformationTime(4803));
+       // System.out.println(Task5.transformateTime(4803));
 
         //Task6
         //System.out.println(Task6.isDotInSpace(-2,-7));

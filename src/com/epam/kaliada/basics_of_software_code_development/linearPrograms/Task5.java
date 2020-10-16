@@ -3,7 +3,7 @@ package com.epam.kaliada.basics_of_software_code_development.linearPrograms;
 // Вывести данное значение длительности в часах, минутах и секундах в следующей форме:
 //ННч ММмин SSc.
 public class Task5 {
-    public static String transformationTime(int time){
+    public static String transformateTime(int time){
         final int SECONDS_IN_HOUR = 3600;
         final int SECONDS_IN_MINUTE = 60;
         int hours = time / SECONDS_IN_HOUR;

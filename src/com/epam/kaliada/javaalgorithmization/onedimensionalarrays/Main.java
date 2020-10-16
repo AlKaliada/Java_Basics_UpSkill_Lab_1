@@ -1,0 +1,4 @@
+package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+
+public class Main {
+}

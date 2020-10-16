@@ -19,7 +19,7 @@ public class Main {
         //System.out.println(Task4.multiplicateSquareTwoHundredNumbers());
 
         //Task5
-        //Task5.writeSymbolInUnicod('r');
+        Task5.writeSymbolInUnicod('r');
 
         //Task6
         //Task6.allDivisorsFromMtoN();

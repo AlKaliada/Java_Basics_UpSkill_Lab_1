@@ -1,4 +1,4 @@
-package Basics_of_software_code_development.Branching;
+package com.epam.kaliada.basics_of_software_code_development.branching;
 //Даны два угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольным.
 public class Task1 {
     public static String isCornerExist(double a, double b){

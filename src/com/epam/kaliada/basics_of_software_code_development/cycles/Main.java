@@ -1,4 +1,4 @@
-package Basics_of_software_code_development.Cycles;
+package com.epam.kaliada.basics_of_software_code_development.cycles;
 
 import java.io.IOException;
 

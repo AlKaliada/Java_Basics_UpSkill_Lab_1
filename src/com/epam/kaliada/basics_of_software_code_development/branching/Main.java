@@ -1,4 +1,4 @@
-package Basics_of_software_code_development.Branching;
+package com.epam.kaliada.basics_of_software_code_development.branching;
 
 public class Main {
     public static void main(String[] args) {

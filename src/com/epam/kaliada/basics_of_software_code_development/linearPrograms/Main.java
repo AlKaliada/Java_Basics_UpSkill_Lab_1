@@ -1,4 +1,4 @@
-package Basics_of_software_code_development.LinearPrograms;
+package com.epam.kaliada.basics_of_software_code_development.linearPrograms;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +18,6 @@ public class Main {
        // System.out.println(Task5.transformationTime(4803));
 
         //Task6
-        System.out.println(Task6.isDotInSpace(0,-3));
+        //System.out.println(Task6.isDotInSpace(-2,-7));
     }
 }

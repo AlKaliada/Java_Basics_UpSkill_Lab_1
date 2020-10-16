@@ -1,4 +1,4 @@
-package Basics_of_software_code_development.Branching;
+package com.epam.kaliada.basics_of_software_code_development.branching;
 //Найти max{min(a, b), min(c, d)}.
 public class Task2 {
     public static int findMax(int a, int b, int c, int d){

@@ -1,4 +1,4 @@
-package com.epam.kaliada.basics_of_software_code_development.linearPrograms;
+package com.epam.kaliada.basics_of_software_code_development.linear_programs;
 
 import java.util.Arrays;
 

@@ -10,7 +10,7 @@ public class Task2 {
             if(i > 2){
                 result.add(i);
             }else {
-                result.add(i * -1);
+                result.add(-i);
             }
         }
         return result;

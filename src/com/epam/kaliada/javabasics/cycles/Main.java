@@ -19,12 +19,13 @@ public class Main {
         //System.out.println(Task4.multiplicateSquareTwoHundredNumbers());
 
         //Task5
-        Task5.writeSymbolInUnicod('r');
+        //Task5.writeSymbolsInASCII();
 
         //Task6
         //Task6.allDivisorsFromMtoN();
 
         //Task7
-       // Task7.findTheSameDigitsInTwoNumbers(22345,42433445);
+        Task7.findTheSameDigitsInTwoNumbers(22345,42433445);
+
     }
 }

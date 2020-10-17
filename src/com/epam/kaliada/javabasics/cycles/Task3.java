@@ -3,7 +3,7 @@ package com.epam.kaliada.javabasics.cycles;
 public class Task3 {
     public static int sumSquareFistHundredNumbers(){
         int sum = 0;
-        for (int i = 1; i < 101; i++) {
+        for (int i = 1; i <= 100; i++) {
             sum += (i * i);
         }
         return sum;

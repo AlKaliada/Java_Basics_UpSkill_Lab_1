@@ -6,9 +6,14 @@ import java.util.Arrays;
 // Сжать массив, выбросив из него каждый второй элемент (освободившиеся элементы заполнить нулями).
 public class Task10 {
     public static void changeArray(int[] a){
-        for (int i = 1; i < a.length; i++) {
-            a[i] = 0;
-            i++;
+        for (int i = 0, k = 0; i < a.length; i++, k++) {
+            if (k < a.length){
+                a [i] = a [k];
+                k++;
+            }else {
+                a[i] = 0;
+            }
+
         }
     }
 }

@@ -6,10 +6,7 @@ import java.io.InputStreamReader;
 
 //Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа. m и n вводятся с клавиатуры
 public class Task6 {
-    public static void allDivisorsFromMtoN() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int m = Integer.parseInt(reader.readLine());
-        int n = Integer.parseInt(reader.readLine());
+    public static void allDivisorsFromMtoN(int m, int n) {
 
         for (int i = m; i <= n; i++) {
             System.out.println("Divisors of " + i + ":");

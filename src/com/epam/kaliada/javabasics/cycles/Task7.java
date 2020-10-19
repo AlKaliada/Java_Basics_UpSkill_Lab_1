@@ -14,6 +14,7 @@ public class Task7 {
                 b = b / 10;
                 if (c == d){
                     System.out.println(c);
+                    break;
                 }
             }
         }

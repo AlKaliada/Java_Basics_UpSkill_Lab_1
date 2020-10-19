@@ -8,9 +8,7 @@ import java.io.InputStreamReader;
 // А программа суммирует все числа от 1 до введенного пользователем числа.
 public class Task1 {
 
-    public static int sumNumbersFromOneToNumber() throws IOException{
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int number = Integer.parseInt(reader.readLine());
+    public static int sumNumbersFromOneToNumber(int number) {
         int result = 0;
         for (int i = 1; i <= number; i++) {
             result += i;

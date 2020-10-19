@@ -1,6 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
-
-import java.util.Arrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 
 public class Main {
     public static void main(String[] args) {

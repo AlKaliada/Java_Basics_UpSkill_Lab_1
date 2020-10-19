@@ -1,4 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 //Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых являются простыми числами.
 public class Task6 {
     public static void sumPrimeNumbersElements(int[] array){

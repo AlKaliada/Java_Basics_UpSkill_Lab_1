@@ -1,4 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 //Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.
 public class Task5 {
     public static void printSomeElementsOfArray(int[] array){

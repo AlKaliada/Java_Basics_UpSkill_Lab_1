@@ -1,4 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 //Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
 public class Task3 {
     public static void countNegativePositiveAndZeroElements(int[] a){

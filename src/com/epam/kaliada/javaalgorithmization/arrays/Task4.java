@@ -1,4 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 
 import java.util.Arrays;
 

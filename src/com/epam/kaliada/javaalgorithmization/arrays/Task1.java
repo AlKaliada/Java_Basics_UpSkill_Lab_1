@@ -1,4 +1,4 @@
-package com.epam.kaliada.javaalgorithmization.onedimensionalarrays;
+package com.epam.kaliada.javaalgorithmization.arrays;
 //В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К
 public class Task1 {
     public static void findSumElementsOfArray(int k){

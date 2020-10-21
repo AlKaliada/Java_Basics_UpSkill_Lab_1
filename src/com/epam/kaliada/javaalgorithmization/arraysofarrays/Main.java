@@ -75,7 +75,8 @@ public class Main {
         //System.out.println(Arrays.deepToString(task15));
 
         //Task16
-        Task16.createMagicSquare(3);
+        Task16.createMagicSquare(8);
+
 
 
     }

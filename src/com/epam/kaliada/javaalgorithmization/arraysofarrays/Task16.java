@@ -11,8 +11,10 @@ public class Task16 {
             createMagicSquareWithOddN(n);
         }else if (n % 4 == 0 && n >= 4){
             createMagicSquareWithNMultipleOfFour(n);
+        }else if (n % 2 == 0){
+            createMagicSquareBySelection(n);
         }else {
-            System.out.println("Try entering an odd number or multiple of 4");
+            System.out.println("Magic square for n = " + n + " doesn't exist");
         }
     }
     private static void createMagicSquareWithOddN(int n){ //метод террас
@@ -268,7 +270,7 @@ public class Task16 {
         System.out.println(Arrays.deepToString(magicSquare));
     }
 
-    public static void createMagicSquareBySelection(int n){
+    private static void createMagicSquareBySelection(int n){
         int[][] magicSquare = new int[n][n];
         int matrixOrder = n * (n * n + 1) / 2;
         ArrayList<Integer> numbersForMagicSquare = new ArrayList<>();
@@ -276,7 +278,6 @@ public class Task16 {
             numbersForMagicSquare.add(i);
         }
         boolean magic = false;
-        int count = 0;
         while (!magic){
             ArrayList<Integer> copy = new ArrayList<>(numbersForMagicSquare);
             for (int i = 0; i < n; i++) {
@@ -286,12 +287,10 @@ public class Task16 {
                     copy.remove(a);
                 }
             }
-            count++;
-            //System.out.println(Arrays.deepToString(magicSquare));
+
         magic = checkColumns(magicSquare, matrixOrder) && checkStrings(magicSquare, matrixOrder) && checkDiagonals(magicSquare, matrixOrder);
 
         }
-        System.out.println(count);
         System.out.println(Arrays.deepToString(magicSquare));
     }
 

@@ -5,6 +5,10 @@ import java.util.Arrays;
 //Отсотрировать стобцы матрицы по возрастанию и убыванию значений эементов.
 public class Task13 {
     public static void descendingSortMatrixColumns(int[][] matrix){
+        if (!CheckMatrix.isMatrix(matrix)){
+            System.out.println("is not a matrix");
+            return;
+        }
         for (int i = 0; i < matrix[0].length; i++) {
             boolean sorted = false;
             while (!sorted){
@@ -23,6 +27,10 @@ public class Task13 {
     }
 
     public static void ascendingSortMatrixColumns(int[][] matrix){
+        if (!CheckMatrix.isMatrix(matrix)){
+            System.out.println("is not a matrix");
+            return;
+        }
         for (int i = 0; i < matrix[0].length; i++) {
             boolean sorted = false;
             while (!sorted){

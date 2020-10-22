@@ -11,7 +11,7 @@ public class Task11 {
         for (int i = 0; i < matrix.length; i++) {
             count = 0;
             for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] =  (int) (Math.random() * 15);
+                matrix[i][j] =  (int) (Math.random() * 15); //15 не входит т.к. в условии "до", чтоб входило 15 необходимо * 16
                 if (matrix[i][j] == 5){
                     count++;
                 }
@@ -20,6 +20,11 @@ public class Task11 {
                 System.out.println("In string " + i + " number 5 is three or more times");
             }
         }
-        System.out.println(Arrays.deepToString(matrix));
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

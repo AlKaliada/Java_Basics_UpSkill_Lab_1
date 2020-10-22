@@ -16,6 +16,12 @@ public class Task14 {
                 }
             }
         }
-        System.out.println(Arrays.deepToString(matrix));
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

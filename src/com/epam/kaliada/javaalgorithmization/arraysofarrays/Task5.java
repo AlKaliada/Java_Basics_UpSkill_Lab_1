@@ -1,6 +1,5 @@
 package com.epam.kaliada.javaalgorithmization.arraysofarrays;
 
-import java.util.Arrays;
 
 //Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
 public class Task5 {

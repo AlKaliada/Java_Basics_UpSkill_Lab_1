@@ -5,6 +5,11 @@ import java.util.Arrays;
 //Отсортировать строки матрицы по возрастанию и убыванию значений элементов.
 public class Task12 {
     public static void descendingSortMatrixStrings(int[][] matrix){
+        if (!CheckMatrix.isMatrix(matrix)){
+            System.out.println("is not a matrix");
+            return;
+        }
+
         for (int i = 0; i < matrix.length; i++) {
             boolean sorted = false;
             while (!sorted){
@@ -23,6 +28,11 @@ public class Task12 {
     }
 
     public static void ascendingSortMatrixStrings(int[][] matrix){
+        if (!CheckMatrix.isMatrix(matrix)){
+            System.out.println("is not a matrix");
+            return;
+        }
+
         for (int i = 0; i < matrix.length; i++) {
             boolean sorted = false;
             while (!sorted){

@@ -2,6 +2,10 @@ package com.epam.kaliada.javaalgorithmization.arraysofarrays;
 //Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
 public class Task15 {
     public static void findMaxMatrixElementAndChangeMatrix(int[][] matrix){
+        if (!CheckMatrix.isMatrix(matrix)){
+            System.out.println("is not a matrix");
+            return;
+        }
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {

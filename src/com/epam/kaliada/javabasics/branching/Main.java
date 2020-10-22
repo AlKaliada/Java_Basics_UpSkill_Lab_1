@@ -12,7 +12,7 @@ public class Main {
        // System.out.println(Task3.isDotsOnOneStraight(1,1,2,2,3,3));
 
         //Task4
-        System.out.println(Task4.isBrickWillPass(5,4, 2,6,7));
+        //System.out.println(Task4.isBrickWillPass(5,4, 2,6,7));
 
         //Task5
         //System.out.println(Task5.calculateFunctionTask5(4));

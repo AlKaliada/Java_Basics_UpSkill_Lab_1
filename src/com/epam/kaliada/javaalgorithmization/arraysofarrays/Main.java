@@ -78,7 +78,7 @@ public class Main {
 
         //Task16
         //Task16.createMagicSquare(8);
-        Task16.createMagicSquareBySelection(5);
+        //Task16.createMagicSquareBySelection(5);
 
 
 

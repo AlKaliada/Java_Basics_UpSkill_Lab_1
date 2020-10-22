@@ -1,7 +1,11 @@
 package com.epam.kaliada.javaalgorithmization.arrays;
 //Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых являются простыми числами.
 public class Task6 {
-    public static void sumPrimeNumbersElements(int[] array){
+    public static void sumPrimeNumbersElements(double[] array){
+        if (array.length <= 0){
+            System.out.println("Wrong length of array");
+            return;
+        }
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             if (isNumberPrime(i)){
@@ -12,18 +16,15 @@ public class Task6 {
     }
 
     private static boolean isNumberPrime(int a){
-        boolean isNumberPrime = true;
-        int b = 2;
-        while (b < a){
-            if (a % b == 0){
-                isNumberPrime = false;
-                break;
+        if (a < 2){
+            return false;
+        }else {
+            for (int i = 2; i < a; i++) {
+                if (a % i == 0){
+                    return false;
+                }
             }
-            b++;
         }
-        if (a == 1){
-            isNumberPrime = false;
-        }
-        return isNumberPrime;
+        return true;
     }
 }

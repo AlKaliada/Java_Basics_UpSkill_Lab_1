@@ -1,7 +1,7 @@
 package com.epam.kaliada.javaalgorithmization.arrays;
 //Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
 public class Task3 {
-    public static void countNegativePositiveAndZeroElements(int[] a){
+    public static void countNegativePositiveAndZeroElements(double[] a){
         int positiveElements = 0;
         int negativeElements = 0;
         int zeroElements = 0;

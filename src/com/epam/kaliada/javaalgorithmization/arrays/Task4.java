@@ -4,24 +4,27 @@ import java.util.Arrays;
 
 //Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.
 public class Task4 {
-    public static void changeMinAndMaxElements(int[] array){
-        int max = array[0];
-        int min = array[0];
-        int minElements = 0;
-        int maxElements = 0;
+    public static void changeMinAndMaxElements(double[] array){
+        if (array.length <= 0){
+            System.out.println("Wrong length of array");
+            return;
+        }
+        double max = array[0];
+        double min = array[0];
+        int indexMinElement = 0;
+        int indexMaxElement = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < min){
                 min = array[i];
-                minElements = i;
+                indexMinElement = i;
             }
             if (array[i] > max){
                 max = array[i];
-                maxElements = i;
+                indexMaxElement = i;
             }
         }
-        int a = array[maxElements];
-        array[maxElements] = array[minElements];
-        array[minElements] = a;
+        array[indexMinElement] = max;
+        array[indexMaxElement] = min;
         System.out.println(Arrays.toString(array));
     }
 }

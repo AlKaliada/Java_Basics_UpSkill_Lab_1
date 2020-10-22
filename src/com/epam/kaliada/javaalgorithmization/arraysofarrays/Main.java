@@ -3,6 +3,8 @@ package com.epam.kaliada.javaalgorithmization.arraysofarrays;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -75,7 +77,8 @@ public class Main {
         //System.out.println(Arrays.deepToString(task15));
 
         //Task16
-        Task16.createMagicSquare(8);
+        //Task16.createMagicSquare(8);
+        Task16.createMagicSquareBySelection(5);
 
 
 

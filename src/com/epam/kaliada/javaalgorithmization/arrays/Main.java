@@ -25,12 +25,12 @@ public class Main {
         //Task5.printSomeElementsOfArray(task5);
 
         //Task6
-        double[] task6 = {0, 3.54, 2, -2, -7, -12, 0.98, 0, 12};
-        Task6.sumPrimeNumbersElements(task6);
+//        double[] task6 = {0, 3.54, 2, -2, -7, -12, 0.98, 0, 12};
+//        Task6.sumPrimeNumbersElements(task6);
 
         //Task7
-        //double[] task7 = {0, 3, 0, -2, -12, -12, 0, 0, 12, 3};
-        //Task7.findMaxInNewArray(task7);
+        double[] task7 = {0, 3, 0, -2, -12, -12, 0, 0, 12, 3, 4};
+        Task7.findMaxInNewArray(task7);
 
         //Task8
         //int[] task8 = {0, 3, 0, -2, -12, -12, 0, 0, 12};

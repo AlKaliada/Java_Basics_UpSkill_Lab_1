@@ -13,15 +13,15 @@ public class Task3 {
             return;
         }
 
-        int[] stringK = new int[matrix[0].length];
-        int[] columnP = new int[matrix.length];
+        System.out.print("Column p = " + p + " : ");
         for (int i = 0; i < matrix.length; i++) {
-            columnP[i] = matrix[i][p];
-            for (int j = 0; j < matrix[0].length; j++) {
-                stringK[j] = matrix[k][j];
-            }
+            System.out.print(matrix[i][p] + " ");
         }
-        System.out.println("String k = " + k + " - " + Arrays.toString(stringK));
-        System.out.println("Column p = " + p + " - " + Arrays.toString(columnP));
+        System.out.println();
+        System.out.print("String k = " + k + " : ");
+        for (int i = 0; i < matrix[0].length; i++) {
+            System.out.print(matrix[k][i] + " ");
+        }
+
     }
 }

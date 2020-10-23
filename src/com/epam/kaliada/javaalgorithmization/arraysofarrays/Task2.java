@@ -11,6 +11,7 @@ public class Task2 {
             System.out.print(matrix[i][i] + " ");
         }
         System.out.println();
+
         for (int i = 0; i < matrix.length; i++) { //печать диагонали с правого верхнего угла в левый нижний
             System.out.print(matrix[i][matrix.length - i - 1] + " ");
         }

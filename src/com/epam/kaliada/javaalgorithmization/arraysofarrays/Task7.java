@@ -4,6 +4,10 @@ package com.epam.kaliada.javaalgorithmization.arraysofarrays;
 //и подсчитать количество положительных элементов в ней.
 public class Task7 {
     public static double[][] createMatrixAndCountPositiveElements(int n){
+        if (n <= 0){
+            throw new IllegalArgumentException("You entered not positive number");
+        }
+
         double[][] result = new double[n][n];
         int count = 0;
         for (int i = 0; i < result.length; i++) {

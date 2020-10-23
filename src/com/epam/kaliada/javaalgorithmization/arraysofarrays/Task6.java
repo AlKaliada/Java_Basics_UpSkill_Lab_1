@@ -2,6 +2,9 @@ package com.epam.kaliada.javaalgorithmization.arraysofarrays;
 //Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
 public class Task6 {
     public static int[][] createMatrix(int n){
+        if (n % 2 != 0){
+            throw new IllegalArgumentException("you entered not even n");
+        }
         int[][] result = new int[n][n];
         for (int i = 0, k = n - 1; i < n / 2; i++, k--) {
             for (int j = i; j < n - i; j++) {

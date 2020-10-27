@@ -45,7 +45,27 @@ public class Main {
 //            System.out.println(Task9.findQuadrilateralSquare(4, 5, 3,2));
 
             //Task10
-            System.out.println(Arrays.toString(Task10.createArrayWithDigitsFromNumber(7598)));
+            //System.out.println(Arrays.toString(Task10.createArrayWithDigitsFromNumber(13548)));
+
+            //Task11
+//            System.out.println(Task11.findNumberWithALotDigits(12,120));
+
+            //Task12
+//            System.out.println(Arrays.toString(Task12.arrayCreate(9, 200)));
+
+            //Task13
+//            Task13.findNumbersTwins(40);
+
+            //Task14
+//            Task14.findArmstrongNumbers(9000);
+
+            //Task15
+
+            //Task16
+//            Task16.findSumNDigitNumbersWithNotEvenDigits(4);
+
+            //Task17
+//            Task17.countSubtractSumOfDigitsFromNumber(55);
 
         }catch (IllegalArgumentException e){
             e.printStackTrace();

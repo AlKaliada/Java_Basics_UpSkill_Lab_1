@@ -10,15 +10,34 @@ public class Task5 {
             System.out.println("You entered zero length array");
             return;
         }
-        System.out.println(Arrays.toString(array));
-        int a = sortArray(array);
-        System.out.println(Arrays.toString(array));
-        System.out.println(a);
+        //1-й способ
+        int indexMaxElement = findIndexMaxElement(array);
+        int max = array[indexMaxElement];
+        if (indexMaxElement == 0){
+            array[indexMaxElement] = array[1];
+        }else {
+            array[indexMaxElement] = array[0];
+        }
+        System.out.println(array[findIndexMaxElement(array)]);
+        array[indexMaxElement] = max;
 
-
+        //2-й способ
+        int[] sortedArray = arraySort(array);
+        System.out.println(sortedArray[sortedArray.length - 2]);
     }
-    protected static int sortArray(int[] array){
-        Arrays.sort(array);
-        return array[array.length - 2];
+    private static int findIndexMaxElement(int[] array){
+        int indexMaxElement = 0;
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max){
+                max = array[i];
+                indexMaxElement = i;
+            }
+        }
+        return indexMaxElement;
+    }
+
+    private static int[] arraySort(int[] array){
+        return Arrays.copyOf(array, array.length);
     }
 }

@@ -1,23 +1,31 @@
 package com.epam.kaliada.strings.arraycharacters;
 
-public class Task1 {
-    //for (int i = 0; i < variableNamesArray.length; i++) {
-//        variableNamesArray[i] = transformationStringToSnakeCase(variableNamesArray[i]);
-//        }
 
-//    char[] chars = string.toCharArray();
-//
-//        if (Character.isUpperCase(chars[0])){
-//                chars[0] = Character.toLowerCase(chars[0]);
-//                }
-//                for (int i = 1; i < chars.length; i++) {
-//        if (Character.isUpperCase(chars[i])){
-//        chars[i] = Character.toLowerCase(chars[i]);
-//        char[] chars1;
-//        chars1 = Arrays.copyOfRange(chars,0,i);
-//        chars1[i] = '_';
-//        chars1 = Arrays.copyOfRange(chars, (i + 1), (chars.length - 1));
-//        chars = chars1;
-//        }
-//        }
+//Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.
+public class Task1 {
+    public static void transformationArrayStringToSnakeCase(String[] variableNamesArray){
+        if (variableNamesArray.length == 0){
+            System.out.println("You entered an empty array");
+            return;
+        }
+        for (int i = 0; i < variableNamesArray.length; i++) {
+        variableNamesArray[i] = transformationStringToSnakeCase(variableNamesArray[i]);
+        }
+    }
+    private static String transformationStringToSnakeCase(String string){
+        char[] chars = string.toCharArray();
+        String result = new String();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (Character.isUpperCase(chars[i]) && i != 0){
+                result = result + "_" + Character.toLowerCase(chars[i]);
+            }else if(Character.isUpperCase(chars[i]) && i == 0){
+                result += Character.toLowerCase(chars[i]);
+            }else {
+                result += chars[i];
+            }
+        }
+        return result;
+    }
+
 }

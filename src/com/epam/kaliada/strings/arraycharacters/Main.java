@@ -1,7 +1,7 @@
-package com.epam.kaliada.strings.strinbuilder;
+package com.epam.kaliada.strings.arraycharacters;
 
 public class Main {
     public static void main(String[] args) {
-        Task1.qw();
+        Task1.qqqq();
     }
 }

@@ -60,6 +60,7 @@ public class Main {
 //            Task14.findArmstrongNumbers(9000);
 
             //Task15
+            Task15.findNDigitNumbersDigitsFormingAnAscendingSequence(3);
 
             //Task16
 //            Task16.findSumNDigitNumbersWithNotEvenDigits(4);

@@ -10,16 +10,16 @@ public class Main {
     public static void main(String[] args) throws IOException{
         try {
             //Task1
-            //int[][] task1 = {{1 ,2, 3, -1, 6}, {2, 6, 1, 3, 0}, {8, 12, 5, 0, 0}, {4, 0, 1, 0, 1}};
-            //Task1.printNotEvenColumnsOfMatrix(task1);
+//            int[][] task1 = {{1 ,2, 3, -1, 6}, {2, 6, 1, 3, 0}, {8, 12, 5, 0, 0}, {4, 0, 1, 0, 1}};
+//            Task1.printNotEvenColumnsOfMatrix(task1);
 
             //Task2
             //int[][] task2 = {{1 ,2, 3, -1}, {2, 6, 1, 3}, {8, 12, 5, 0}, {4, 0, 1, 0}};
             //Task2.printDiagonalElementOfMatrix(task2);
 
             //Task3
-//        int[][] task3 = {{1 ,2, 3, -1, 6}, {2, 6, 1, 3, 0}, {8, 12, 5, 7, 0}, {4, 0, 1, 0, 1}};
-//        Task3.printStringKColumnPInMatrix(task3, 0, 3);
+        int[][] task3 = {{1 ,2, 3, -1, 6}, {2, 6, 1, 3, 0}, {8, 12, 5, 7, 0}, {4, 0, 1, 0, 1}};
+        Task3.printStringKColumnPInMatrix(task3, 1, 3);
 
             //Task4
 //            int n = 4;

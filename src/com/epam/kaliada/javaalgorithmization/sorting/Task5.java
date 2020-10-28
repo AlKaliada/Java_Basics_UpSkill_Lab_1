@@ -5,7 +5,7 @@ public class Task5 {
         if(array.length == 0){
             System.out.println("You entered an empty array");
         }
-        for (int i = array.length / 2; i > 0; i /= 2) {
+        for (int i = (array.length / 2); i > 0; i /= 2) {
             for (int j = i; j < array.length; j ++) {
                 int k = j;
                 while (k > 0 && array[k] < array[k - i]){

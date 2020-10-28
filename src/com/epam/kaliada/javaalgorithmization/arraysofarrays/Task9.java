@@ -6,16 +6,16 @@ public class Task9 {
         if (!CheckMatrix.isMatrix(matrix)){
             System.out.println("is not a matrix");
             return;
-        } else {
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix[0].length; j++) {
-                    if (matrix[i][j] < 0){
-                        System.out.println("Negative number in matrix");
-                        return;
-                    }
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] < 0){
+                    System.out.println("Negative number in matrix");
+                    return;
                 }
             }
         }
+
 
         int numberColumnWithMaxSum = 0;
         int maxSum = 0;

@@ -18,11 +18,10 @@ public class CheckMatrix {
 
         if (matrix.length <=0 || matrix[0].length <= 0){
             return false;
-        }else {
-            for (int i = 0; i < matrix.length; i++) {
-                if (matrix[i].length != matrix.length){
-                    return false;
-                }
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            if (matrix[i].length != matrix.length){
+                return false;
             }
         }
         return true;

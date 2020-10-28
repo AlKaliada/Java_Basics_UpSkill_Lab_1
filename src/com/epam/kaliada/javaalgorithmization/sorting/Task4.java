@@ -10,7 +10,7 @@ public class Task4 {
         }
         for (int i = 1; i < array.length; i++) {
             int k = i;
-            while (k > 0 && array[k] < array[k - 1]){
+            while (k > 0 && (array[k] < array[k - 1])){
                 int a = array[k];
                 array[k] = array[k - 1];
                 array[k - 1] = a;

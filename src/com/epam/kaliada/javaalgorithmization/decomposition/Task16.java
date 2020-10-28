@@ -41,7 +41,7 @@ public class Task16 {
     }
     private static int findFirstNDigitNumber(int number){
         int firstNDigitNumber = 1;
-        for (int i = 0; i < number - 1; i++) {
+        for (int i = 0; i < (number - 1); i++) {
             firstNDigitNumber *= 10;
         }
         return firstNDigitNumber;

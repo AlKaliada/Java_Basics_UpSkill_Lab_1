@@ -13,7 +13,7 @@ public class Task13 {
             boolean sorted = false;
             while (!sorted){
                 sorted = true;
-                for (int j = 0; j < matrix.length - 1; j++) {
+                for (int j = 0; j < (matrix.length - 1); j++) {
                     if (matrix[j][i] > matrix[j + 1][i]){
                         int a = matrix[j + 1][i];
                         matrix[j + 1][i] = matrix[j][i];
@@ -35,7 +35,7 @@ public class Task13 {
             boolean sorted = false;
             while (!sorted){
                 sorted = true;
-                for (int j = 0; j < matrix.length - 1; j++) {
+                for (int j = 0; j < (matrix.length - 1); j++) {
                     if (matrix[j][i] < matrix[j + 1][i]){
                         int a = matrix[j + 1][i];
                         matrix[j + 1][i] = matrix[j][i];

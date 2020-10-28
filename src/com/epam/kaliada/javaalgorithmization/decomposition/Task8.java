@@ -3,7 +3,7 @@ package com.epam.kaliada.javaalgorithmization.decomposition;
 //Пояснение. Составить метод(методы) для вычисления суммы трех последовательно расположенных элементов массива с номерами от k до m.
 public class Task8 {
     public static int sumArraysElementsFromKToM(int[] array, int k, int m){
-        if (k < 0 || m < 0 || array.length == 0 || k > array.length - 1 || m > array.length - 1 ){
+        if (k < 0 || m < 0 || array.length == 0 || k > (array.length - 1) || m > (array.length - 1)){
             throw new IllegalArgumentException("You entered wrong data");
         }
         int sum = 0;

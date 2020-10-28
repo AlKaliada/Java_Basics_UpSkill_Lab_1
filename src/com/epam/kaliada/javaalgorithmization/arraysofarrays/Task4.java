@@ -8,8 +8,9 @@ public class Task4 {
 
         int[][] result = new int[n][n];
         for (int i = 0; i < result.length; i++) {
+            boolean evenDigit = i % 2 == 0;
             for (int j = 0; j < result.length; j++) {
-                result[i][j] = i % 2 == 0 ? j + 1 : result.length - j;
+                result[i][j] = evenDigit ? (j + 1) : (result.length - j);
             }
         }
         return result;

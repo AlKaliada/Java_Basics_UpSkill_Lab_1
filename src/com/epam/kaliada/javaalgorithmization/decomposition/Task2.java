@@ -21,7 +21,7 @@ public class Task2 {
             greatestCommonDivisor = b;
         }
         while (greatestCommonDivisor > 0){
-            if (a % greatestCommonDivisor == 0 && b % greatestCommonDivisor == 0){
+            if ((a % greatestCommonDivisor) == 0 && (b % greatestCommonDivisor) == 0){
                 return greatestCommonDivisor;
             }
             greatestCommonDivisor--;

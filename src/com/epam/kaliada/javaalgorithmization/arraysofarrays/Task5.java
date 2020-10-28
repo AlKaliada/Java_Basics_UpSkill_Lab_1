@@ -10,7 +10,7 @@ public class Task5 {
 
         int[][] result = new int[n][n];
         for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result.length - i; j++) {
+            for (int j = 0; j < (result.length - i); j++) {
                 result[i][j] = i + 1;
             }
         }

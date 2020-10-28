@@ -3,7 +3,7 @@ package com.epam.kaliada.javaalgorithmization.decomposition;
 // Написать метод(методы), определяющие, между какими из пар точек самое большое расстояние. Указание. Координаты точек занести в массив.
 public class Task4 {
     public static void findMinimumDistanceBetweenDots(double ...a){
-        if (a.length < 4 || a.length % 2 != 0){
+        if (a.length < 4 || (a.length % 2 != 0)){
             System.out.println("You entered a wrong data");
             return;
         }
@@ -12,7 +12,7 @@ public class Task4 {
         double biggestDistanceBetweenDots = 0;
         double distanceBetweenDots;
 
-        for (int i = 0; i < a.length - 2; i += 2) {
+        for (int i = 0; i < (a.length - 2); i += 2) {
             for (int j = 2; j < a.length; j += 2) {
                 distanceBetweenDots = findDistanceBetweenTwoDots(a[i], a[i + 1], a[j], a[j + 1]);
                 if (distanceBetweenDots > biggestDistanceBetweenDots){

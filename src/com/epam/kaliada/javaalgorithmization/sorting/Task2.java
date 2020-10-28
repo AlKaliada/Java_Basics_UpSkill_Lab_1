@@ -10,7 +10,7 @@ public class Task2 {
         }
         int indexOfMin = 0;
         int a;
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int i = 0; i < (array.length - 1); i++) {
             indexOfMin = i;
             for (int j = i + 1; j < array.length; j++) {
                 if (array[j] < array[indexOfMin]){

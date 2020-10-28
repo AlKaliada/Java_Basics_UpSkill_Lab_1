@@ -7,7 +7,7 @@ public class Task12 {
             throw new IllegalArgumentException("You entered not a natural number");
         }
         int[] array = new int[findArrayLength(k, n)];
-        for (int i = 0, j = 0; i < array.length && j <=n; j++) {
+        for (int i = 0, j = 0; i < array.length && j <= n; j++) {
             if (findSumOfDigitsInNumber(j) == k){
                 array[i] = j;
                 i++;

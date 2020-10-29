@@ -11,21 +11,21 @@ public class Task5 {
         int endText = chars.length - 1;
         int a = 0;
 
-        while (Character.isSpaceChar(chars[a]) && a < chars.length - 1){
+        while (chars[a] == ' ' && a < chars.length - 1){
             startText++;
             a++;
         }
 
         int b = chars.length - 1;
-        while (Character.isSpaceChar(chars[b]) && b > 0){
+        while (chars[b] == ' ' && b > 0){
             endText--;
             b--;
         }
 
         for (int i = startText; i <= endText; i++) {
-            if (!Character.isSpaceChar(chars[i])){
+            if (chars[i] != ' '){
                 result += chars[i];
-            }else if (Character.isSpaceChar(chars[i]) && !Character.isSpaceChar(chars[i + 1])){
+            }else if (chars[i] == ' ' && chars[i + 1] != ' '){
                 result += chars[i];
             }
         }

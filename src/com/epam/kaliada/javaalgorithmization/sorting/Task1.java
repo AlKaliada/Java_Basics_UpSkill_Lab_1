@@ -19,7 +19,7 @@ public class Task1 {
     }
 
     public static int[] combiningArraysSecond(int[] a, int[] b, int k){
-        if (a.length <= 0 || b.length <= 0){
+        if (a.length == 0 || b.length == 0){
             throw new IllegalArgumentException("You entered an empty or negative array");
         }
         for (int i = a.length - 1; i > b.length + k; i--) {

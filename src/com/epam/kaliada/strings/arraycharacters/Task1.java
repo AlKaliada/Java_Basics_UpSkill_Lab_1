@@ -8,6 +8,7 @@ public class Task1 {
             System.out.println("You entered an empty array");
             return;
         }
+
         for (int i = 0; i < variableNamesArray.length; i++) {
         variableNamesArray[i] = transformationStringToSnakeCase(variableNamesArray[i]);
         }
@@ -18,7 +19,7 @@ public class Task1 {
 
         for (int i = 0; i < chars.length; i++) {
             if (Character.isUpperCase(chars[i]) && i != 0){
-                result = result + "_" + Character.toLowerCase(chars[i]);
+                result = result + '_' + Character.toLowerCase(chars[i]);
             }else if(Character.isUpperCase(chars[i]) && i == 0){
                 result += Character.toLowerCase(chars[i]);
             }else {

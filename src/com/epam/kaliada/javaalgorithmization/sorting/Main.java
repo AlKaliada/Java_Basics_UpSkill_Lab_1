@@ -8,8 +8,8 @@ public class Main {
             //Task1
             int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9};
             int[] b = {10, 11};
-            int k = 10;
-            System.out.println(Arrays.toString(Task1.combiningArraysFirst(a,b,k)));
+            int k = 0;
+//            System.out.println(Arrays.toString(Task1.combiningArraysFirst(a,b,k)));
             System.out.println(Arrays.toString(Task1.combiningArraysSecond(a,b,k)));
 
             //Task2

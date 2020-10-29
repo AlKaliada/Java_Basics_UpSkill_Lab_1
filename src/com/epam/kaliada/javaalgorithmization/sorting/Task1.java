@@ -3,12 +3,12 @@ package com.epam.kaliada.javaalgorithmization.sorting;
 // Объединить их в один массив, включив второй массив между k-м и (k+1) - м элементами первого, при этом не используя дополнительный массив.
 public class Task1 {
     public static int[] combiningArraysFirst(int[] a, int[] b, int k){
-        if (a.length == 0 || b.length == 0){
-            throw new IllegalArgumentException("You entered an empty array");
+        if (a.length == 0 || b.length == 0 || k < 0){
+            throw new IllegalArgumentException("You entered an empty array or k less than 0");
         }
         int q = 0;
-        for (int i = a.length - 1; i > k; i--) {
-            if (i > b.length + k){
+        for (int i = (a.length - 1); i > k; i--) {
+            if (i > (b.length + k)){
                 a[i] = a[i - b.length];
             }else {
                 a[k + 1 + q] = b[q];
@@ -19,10 +19,10 @@ public class Task1 {
     }
 
     public static int[] combiningArraysSecond(int[] a, int[] b, int k){
-        if (a.length == 0 || b.length == 0){
-            throw new IllegalArgumentException("You entered an empty or negative array");
+        if (a.length == 0 || b.length == 0 || k < 0){
+            throw new IllegalArgumentException("You entered an empty or negative array or k less than 0");
         }
-        for (int i = a.length - 1; i > b.length + k; i--) {
+        for (int i = (a.length - 1); i > (b.length + k); i--) {
                 a[i] = a[i - b.length];
         }
         for (int i = k + 1, j = 0; i < a.length && j < b.length; i++, j++) {

@@ -13,7 +13,11 @@ public class Main {
 
             //Task3
 //            String task3 = "tenet";
-//            System.out.println(Task3.isStringPalindrome(task3));
+//            System.out.println(Task3.isStringPalindromeFirst(task3));
+//            System.out.println(Task3.isStringPalindromeSecond(task3));
+
+            //Task4
+//            Task4.transformationInformaticsToCake();
 
             //Task5
 //            String task5 = "The greatest number of consecutive spaces";
@@ -28,11 +32,16 @@ public class Main {
 //            System.out.println(Task7.deleteSpacesAndRecurringCharacters(task7));
 
             //Task8
-            String task8 = "The greatest number of consecutive spaces";
-            Task8.findLongestWord(task8);
+//            String task8 = "The greatest number of consecutive spaces";
+//            Task8.findLongestWord(task8);
 
             //Task9
-            String
+//            String task9 = "The GrRatest фыфыЙЦ";
+//            Task9.countLowercaseAndUppercaseLetters(task9);
+
+            //Task10
+            String task10 = "Если оба типа совместимы! их преобразование. Например? значение типа byte.";
+            Task10.countSentencesInString(task10);
 
 
         }catch (IllegalArgumentException e){

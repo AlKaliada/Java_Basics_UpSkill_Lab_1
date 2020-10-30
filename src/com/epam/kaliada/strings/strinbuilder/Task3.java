@@ -1,7 +1,7 @@
 package com.epam.kaliada.strings.strinbuilder;
 //Проверить, является ли заданное слово палиндромом.
 public class Task3 {
-    public static boolean isStringPalindrome(String string){
+    public static boolean isStringPalindromeFirst(String string){
         if (string.length() == 0){
             throw new IllegalArgumentException("You entered empty string");
         }
@@ -17,5 +17,12 @@ public class Task3 {
             }
         }
         return count == a;
+    }
+
+    public static boolean isStringPalindromeSecond(String string){
+        StringBuilder stringBuilder = new StringBuilder(string);
+        stringBuilder.reverse();
+        String stringReverse = stringBuilder.toString();
+        return string == stringReverse.intern();
     }
 }

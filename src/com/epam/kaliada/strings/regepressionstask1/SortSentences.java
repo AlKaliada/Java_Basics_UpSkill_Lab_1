@@ -1,24 +1,33 @@
 package com.epam.kaliada.strings.regepressionstask1;
 
-import java.util.Arrays;
 
 public class SortSentences {
-    public static void createArrayOfSentences(String string){
-        String[] strArray = string.split("[!?.] ");
-        StringBuilder stringBuilder = new StringBuilder(strArray[strArray.length - 1]);
-        strArray[strArray.length - 1] = stringBuilder.substring(0, stringBuilder.length() - 1);
-        sortSentencesByLength(strArray);
-        System.out.println(Arrays.toString(strArray));
+    private String string;
+    private SplitString splitString;
+
+    public SortSentences(String string) {
+        this.string = string;
     }
-    public static void sortSentencesByLength(String[] strArray){
-        for (int i = 1; i < strArray.length; i++) {
+
+    public String sortWordsByLengthInSentences(){
+        splitString = new SplitString();
+        String[] arrayOfSentences = splitString.createArrayOfSentences(string);
+        for (int i = 0; i < arrayOfSentences.length; i++) {
+            arrayOfSentences[i] = sortWordsByLength(arrayOfSentences[i]);
+        }
+        return String.join("\n", arrayOfSentences);
+    }
+    private String sortWordsByLength(String string){
+        String[] arrayOfWords = splitString.createArrayOfWords(string);
+        for (int i = 1; i < arrayOfWords.length; i++) {
             int k = i;
-            while (k > 0 && (strArray[k].length() < strArray[k - 1].length())){
-                String str = strArray[k];
-                strArray[k] = strArray[k - 1];
-                strArray[k - 1] = str;
+            while (k > 0 && (arrayOfWords[k].length() < arrayOfWords[k - 1].length())){
+                String str = arrayOfWords[k];
+                arrayOfWords[k] = arrayOfWords[k - 1];
+                arrayOfWords[k - 1] = str;
                 k --;
             }
         }
+        return String.join(" ", arrayOfWords);
     }
 }

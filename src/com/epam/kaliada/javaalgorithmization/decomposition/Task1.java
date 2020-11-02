@@ -17,12 +17,8 @@ public class Task1 {
         }else if (a == 0 || b == 0){
             throw new IllegalArgumentException("Greatest common divisor for 0 doesn't exist");
         }
-        int greatestCommonDivisor;
-        if (a < b){
-            greatestCommonDivisor = a;
-        }else {
-            greatestCommonDivisor = b;
-        }
+        int greatestCommonDivisor = (a < b) ? a : b;
+
         while (greatestCommonDivisor > 0){
             if ((a % greatestCommonDivisor) == 0 && (b % greatestCommonDivisor) == 0){
                 return greatestCommonDivisor;

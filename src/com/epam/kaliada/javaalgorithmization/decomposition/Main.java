@@ -36,10 +36,8 @@ public class Main {
 //            Task7.findSumFactorialsNotEvenNumbersFromOneToNine();
 
             //Task8
-//            int[] task8 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//            System.out.println(Task8.sumArraysElementsFromKToM(task8, 1, 3));
-//            System.out.println(Task8.sumArraysElementsFromKToM(task8, 3, 5));
-//            System.out.println(Task8.sumArraysElementsFromKToM(task8, 4, 6));
+            int[] task8 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            Task8.sumArraysElementsFromKToM(task8,2,4);
 
             //Task9
 //            System.out.println(Task9.findQuadrilateralSquare(4, 5, 3,2));
@@ -60,7 +58,7 @@ public class Main {
 //            Task14.findArmstrongNumbers(9000);
 
             //Task15
-            Task15.findNDigitNumbersDigitsFormingAnAscendingSequence(3);
+//            Task15.findNDigitNumbersDigitsFormingAnAscendingSequence(3);
 
             //Task16
 //            Task16.findSumNDigitNumbersWithNotEvenDigits(4);

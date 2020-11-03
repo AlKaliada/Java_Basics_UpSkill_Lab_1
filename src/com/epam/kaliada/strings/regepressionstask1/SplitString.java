@@ -8,6 +8,6 @@ public class SplitString {
         return string.split("[!?.]+\\s*");
     }
     public String[] createArrayOfWords(String string){
-        return string.split("[:,;]?\\s+");
+        return string.split("\b");
     }
 }

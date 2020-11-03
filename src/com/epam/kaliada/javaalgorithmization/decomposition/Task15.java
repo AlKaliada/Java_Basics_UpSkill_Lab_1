@@ -3,11 +3,11 @@ package com.epam.kaliada.javaalgorithmization.decomposition;
 // последовательность (например, 1234, 5789). Для решения задачи использовать декомпозицию.
 public class Task15 {
     public static void findNDigitNumbersDigitsFormingAnAscendingSequence(int n){
-        if (n < 1){
-            System.out.println("You entered wrong data, enter n more than 0");
+        if (n < 2){
+            System.out.println("You entered wrong data, enter n more than 1");
             return;
         }
-        for (int i = findFirstNDigitNumber(n); i <= findLastNDigitNumber(n); i++) {
+        for (int i = (int)Math.pow(10, (n - 1)); i <= ((int)Math.pow(10, n) - 1); i++) {
             if (checkNumberConsistsOfDigitsFormingAnAscendingSequence(i)){
                 System.out.println(i);
             }
@@ -27,19 +27,5 @@ public class Task15 {
             }
         }
         return true;
-    }
-    private static int findFirstNDigitNumber(int number){
-        int firstNDigitNumber = 1;
-        for (int i = 0; i < (number - 1); i++) {
-            firstNDigitNumber *= 10;
-        }
-        return firstNDigitNumber;
-    }
-    private static int findLastNDigitNumber(int number){
-        int LastNDigitNumber = 1;
-        for (int i = 0; i < number; i++) {
-            LastNDigitNumber *= 10;
-        }
-        return LastNDigitNumber - 1;
     }
 }

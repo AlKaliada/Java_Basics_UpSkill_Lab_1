@@ -13,17 +13,14 @@ public class Task5 {
         //1-й способ
         int indexMaxElement = findIndexMaxElement(array);
         int max = array[indexMaxElement];
-        if (indexMaxElement == 0){
-            array[indexMaxElement] = array[1];
-        }else {
-            array[indexMaxElement] = array[0];
-        }
+        array[indexMaxElement] = -2_147_483_648;
         System.out.println(array[findIndexMaxElement(array)]);
         array[indexMaxElement] = max;
 
         //2-й способ
-        int[] sortedArray = arraySort(array);
-        System.out.println(sortedArray[sortedArray.length - 2]);
+        int[] arrayCopy = makeArrayCopy(array);
+        Arrays.sort(arrayCopy);
+        System.out.println(arrayCopy[arrayCopy.length - 2]);
     }
     private static int findIndexMaxElement(int[] array){
         int indexMaxElement = 0;
@@ -37,7 +34,7 @@ public class Task5 {
         return indexMaxElement;
     }
 
-    private static int[] arraySort(int[] array){
+    private static int[] makeArrayCopy(int[] array){
         return Arrays.copyOf(array, array.length);
     }
 }

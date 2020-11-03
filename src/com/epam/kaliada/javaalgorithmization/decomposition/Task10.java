@@ -5,23 +5,18 @@ public class Task10 {
         if (n < 0){
             throw new IllegalArgumentException("You entered wrong data");
         }
-        String stringNumber = String.valueOf(n);
-        int[] array = new int[stringNumber.length()];
-        for (int i = 0; i < stringNumber.length(); i++) {
-            array[i] = extractDigitsFromNumber(i, n);
+
+        int[] array = new int[findLengthOfNumber(n)];
+        for (int i = (array.length - 1); i >= 0; i--) {
+            array[i] = n % 10;
+            n /= 10;
         }
+//
         return array;
     }
 
-    private static int extractDigitsFromNumber(int numberDigit, int number){
-        String stringNumber = String.valueOf(number);
-        int digit = 0;
-        for (int i = 0; i < stringNumber.length() - numberDigit; i++) {
-            digit = number % 10;
-            number /= 10;
-        }
+    private static int findLengthOfNumber(int number){
 
-
-        return digit;
+        return String.valueOf(number).length();
     }
 }

@@ -26,7 +26,7 @@ public class Main {
 //            Task4.findMinimumDistanceBetweenDots(0,0,2,2,-3,-3,4,-3, 10,10);
 
             //Task5
-//            int[] task5 = {4, 3, 5, 67, 8, 12, 0};
+//            int[] task5 = {4, 3, 5, 67, 15, 12, 0};
 //            Task5.findSecondLargestNumber(task5);
 
             //Task6
@@ -36,14 +36,14 @@ public class Main {
 //            Task7.findSumFactorialsNotEvenNumbersFromOneToNine();
 
             //Task8
-            int[] task8 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-            Task8.sumArraysElementsFromKToM(task8,2,4);
+//            int[] task8 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//            Task8.sumArraysElementsFromKToM(task8,2,4);
 
             //Task9
 //            System.out.println(Task9.findQuadrilateralSquare(4, 5, 3,2));
 
             //Task10
-            //System.out.println(Arrays.toString(Task10.createArrayWithDigitsFromNumber(13548)));
+//            System.out.println(Arrays.toString(Task10.createArrayWithDigitsFromNumber(13548)));
 
             //Task11
 //            System.out.println(Task11.findNumberWithALotDigits(12,120));
@@ -58,7 +58,7 @@ public class Main {
 //            Task14.findArmstrongNumbers(9000);
 
             //Task15
-//            Task15.findNDigitNumbersDigitsFormingAnAscendingSequence(3);
+            Task15.findNDigitNumbersDigitsFormingAnAscendingSequence(3);
 
             //Task16
 //            Task16.findSumNDigitNumbersWithNotEvenDigits(4);

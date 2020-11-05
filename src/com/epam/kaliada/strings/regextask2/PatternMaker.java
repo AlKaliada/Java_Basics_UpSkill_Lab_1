@@ -3,14 +3,14 @@ package com.epam.kaliada.strings.regextask2;
 import java.util.regex.Pattern;
 
 public class PatternMaker {
-    private Pattern patternOfTag;
+    private Pattern patternOfOpeningTag;
 
     public PatternMaker() {
-        this.patternOfTag = makePatternOfTag();
+        this.patternOfOpeningTag = makePatternOfTag();
     }
 
-    public Pattern getPatternOfTag() {
-        return patternOfTag;
+    public Pattern getPatternOfOpeningTag() {
+        return patternOfOpeningTag;
     }
 
     private Pattern makePatternOfTag(){

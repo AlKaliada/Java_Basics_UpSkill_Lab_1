@@ -1,6 +1,8 @@
 package com.epam.kaliada.strings.regextask2;
 
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String stringXml ="<notes>\n" +
@@ -17,7 +19,9 @@ public class Main {
                 "       <body/>\n" +
                 "   </note>\n" +
                 "</notes>";
-        XmlParser xmlParser = new XmlParser(stringXml);
-        xmlParser.splitsIntoNodes();
+
+        NotepadXml notepadXml = new NotepadXml();
+        notepadXml.parsingXmlDocument(stringXml);
+        System.out.println(Arrays.deepToString(notepadXml.getNodes()));
     }
 }

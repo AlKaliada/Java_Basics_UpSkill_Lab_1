@@ -5,32 +5,43 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class XmlParser {
-    private String stringXml;
+    private String xmlDocument;
 
     public XmlParser(String stringXml) {
-        this.stringXml = stringXml;
+        this.xmlDocument = stringXml;
     }
 
-    public void splitsIntoNodes(){
+    public void splitsIntoNodes(String[][] nodes){
         PatternMaker patternMaker = new PatternMaker();
-        Pattern pattern = patternMaker.getPatternOfTag();
-        Matcher matcher = pattern.matcher(stringXml);
-        while (matcher.find()){
-            String tagName = matcher.group(2);
-            String openingTag = matcher.group();
-            System.out.println(openingTag);
+        Pattern patternOfOpeningTag = new PatternMaker().getPatternOfOpeningTag();
+        Matcher matcherOfOpeningTag = patternOfOpeningTag.matcher(xmlDocument);
+        int i = 0;
+        while (matcherOfOpeningTag.find()){
+            String tagName = matcherOfOpeningTag.group(2);
+            String openingTag = matcherOfOpeningTag.group();
+            nodes[i][0] = openingTag;
             Pattern patternClosingTag = patternMaker.makePatternOfClosingTag(tagName);
-            Matcher matcherClosingTag = patternClosingTag.matcher(stringXml);
-            int firstIndexOfOpeningTagName = matcher.start();
+            Matcher matcherClosingTag = patternClosingTag.matcher(xmlDocument);
+            int firstIndexOfOpeningTagName = matcherOfOpeningTag.start();
             matcherClosingTag.find(firstIndexOfOpeningTagName);
-            int firstIndexOfTagBody = matcher.end();
+            int firstIndexOfTagBody = matcherOfOpeningTag.end();
             int firstIndexOfClosingTag = matcherClosingTag.start();
-            String tagBody = stringXml.substring(firstIndexOfTagBody, firstIndexOfClosingTag);
-            System.out.println(tagBody);
+            String tagBody = xmlDocument.substring(firstIndexOfTagBody, firstIndexOfClosingTag);
+            nodes[i][1] = tagBody;
             String closingTag = matcherClosingTag.group();
-            System.out.println(closingTag);
-            System.out.println("............................................");
+            nodes[i][2] = closingTag;
+            i++;
         }
+    }
+
+    public int tagsCount(){
+        Pattern patternOfOpeningTag = new PatternMaker().getPatternOfOpeningTag();
+        Matcher matcherOfOpeningTag = patternOfOpeningTag.matcher(xmlDocument);
+        int count = 0;
+        while (matcherOfOpeningTag.find()){
+            count++;
+        }
+        return count;
     }
 
 }

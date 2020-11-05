@@ -9,7 +9,7 @@ public class WordsSorter {
         this.text = text;
     }
 
-    public String sortByLengthInSentences(){
+    public String splitIntoSentencesAndSortByLength(){
         textSplitter = new TextSplitter();
         String[] sentences = textSplitter.splitTextIntoSentences(text);
         for (int i = 0; i < sentences.length; i++) {

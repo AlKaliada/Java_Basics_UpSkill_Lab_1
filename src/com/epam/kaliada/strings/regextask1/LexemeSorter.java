@@ -13,15 +13,15 @@ public class LexemeSorter {
         this.text = text;
         this.symbol = symbol;
     }
-    public String sortLexemesByNumberOfEnteredSymbolInSentences(){
+    public String splitIntoSentencesAndsortLexemesByNumberOfEnteredSymbol(){
         textSplitter = new TextSplitter();
         String[] sentences = textSplitter.splitTextIntoSentences(text);
         for (int i = 0; i < sentences.length; i++) {
-            sentences[i] = sortSentenceByNumberOfEnteredCharacter(sentences[i]);
+            sentences[i] = sortSentenceByNumberOfEnteredSymbol(sentences[i]);
         }
         return String.join("\n", sentences);
     }
-    private String sortSentenceByNumberOfEnteredCharacter(String string){
+    private String sortSentenceByNumberOfEnteredSymbol(String string){
         String[] arrayOfLexemes = textSplitter.splitTextIntoWords(string);
         boolean sorted = false;
         while (!sorted){

@@ -12,8 +12,8 @@ public class Main {
         notepadStudents.studentCreator("Kolesnikova M.A", 97);
         notepadStudents.studentCreator("Znak M.A.", 97);
         notepadStudents.studentCreator("Kaliada A.L.", 97);
-        notepadStudents.studentCreator("Lukashenko A.G.", 3);
-        notepadStudents.studentCreator("Karaev Y.H.", 3);
+        notepadStudents.studentCreator("Lulu A.G.", 3);
+        notepadStudents.studentCreator("Kara Y.H.", 3);
         notepadStudents.studentCreator("Hrenin V.G.", 3);
         notepadStudents.addStudentMark("Tihanovskiy S.L.", 97, 1, 10);
         notepadStudents.addStudentMark("Tihanovskiy S.L.", 97, 2, 10);
@@ -24,8 +24,8 @@ public class Main {
         notepadStudents.addStudentMark("Babariko V.D.", 97, 1, 9);
         notepadStudents.addStudentMark("Babariko V.D.", 97, 5, 9);
         notepadStudents.addStudentMark("Babariko V.D.", 97, 2, 10);
-        notepadStudents.addStudentMark("Lukashenko A.G.", 3, 1, 1);
-        notepadStudents.addStudentMark("Karaev Y.H.", 3, 2, 1);
+        notepadStudents.addStudentMark("Lulu A.G.", 3, 1, 1);
+        notepadStudents.addStudentMark("Kara Y.H.", 3, 2, 1);
         notepadStudents.addStudentMark("Hrenin V.G.", 3, 4, 2);
         notepadStudents.printExcellentStudents();
     }

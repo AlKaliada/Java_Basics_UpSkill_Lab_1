@@ -1,13 +1,14 @@
 package com.epam.kaliada.classes.simplestclasses.task4;
 
-import java.util.Date;
+
+import java.time.LocalTime;
 
 public class Train {
     private String destination;
     private int trainNumber;
-    private String departureTime;
+    private LocalTime departureTime;
 
-    public Train(String destination, int trainNumber, String departureTime) {
+    public Train(String destination, int trainNumber, LocalTime departureTime) {
         this.destination = destination;
         this.trainNumber = trainNumber;
         this.departureTime = departureTime;
@@ -21,7 +22,7 @@ public class Train {
         this.trainNumber = trainNumber;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureTime(LocalTime departureTime) {
         this.departureTime = departureTime;
     }
 
@@ -33,7 +34,7 @@ public class Train {
         return trainNumber;
     }
 
-    public String getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return departureTime;
     }
 }

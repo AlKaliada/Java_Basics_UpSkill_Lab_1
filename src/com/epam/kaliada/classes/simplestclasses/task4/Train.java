@@ -1,5 +1,7 @@
 package com.epam.kaliada.classes.simplestclasses.task4;
 
+import java.util.Date;
+
 public class Train {
     private String destination;
     private int trainNumber;

@@ -6,6 +6,8 @@ package com.epam.kaliada.classes.simplestclasses.task4;
 // быть упорядочены по времени отправления.
 public class Main {
     public static void main(String[] args) {
+        NotepadTrains notepadTrains = new NotepadTrains();
+        notepadTrains.trainCreator("Minsk", 17, "12-81");
 
     }
 }

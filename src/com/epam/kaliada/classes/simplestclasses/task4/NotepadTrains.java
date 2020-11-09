@@ -2,6 +2,7 @@ package com.epam.kaliada.classes.simplestclasses.task4;
 
 
 import java.time.LocalTime;
+import java.util.Arrays;
 
 public class NotepadTrains {
     private Train[] trains;
@@ -16,7 +17,7 @@ public class NotepadTrains {
             trains[numberOfTrains] = train;
             numberOfTrains++;
         }else{
-            System.out.println("You entered wrong data or notepad of trains full");
+            System.out.println("You entered wrong data or notepad of trains is full");
         }
     }
 
@@ -47,6 +48,31 @@ public class NotepadTrains {
     }
     public Train[] sortTrainsByDestination(){
         Train[] copy = trains.clone();
+
+        boolean sorted = false;
+        while (!sorted){
+            sorted = true;
+            for (int i = 0; i < (copy.length - 1); i++) {
+                if (!checkTwoWordsSortedAlphabetically(copy[i].getDestination(), copy[i + 1].getDestination())){
+                    sorted = false;
+                    Train train = copy[i];
+                    copy[i] = copy[i + 1];
+                    copy[i + 1] = train;
+                }
+                if (copy[i].getDestination().equals(copy[i + 1].getDestination()) && copy[i].getDepartureTime().isAfter(copy[i + 1].getDepartureTime())){
+                    sorted = false;
+                    Train train = copy[i];
+                    copy[i] = copy[i + 1];
+                    copy[i + 1] = train;
+                }
+            }
+        }
         return copy;
+    }
+
+    private boolean checkTwoWordsSortedAlphabetically(String first, String second){
+        String[] strArray = {first.toLowerCase(), second.toLowerCase()};
+        Arrays.sort(strArray);
+        return first.toLowerCase().equals(strArray[0]);
     }
 }

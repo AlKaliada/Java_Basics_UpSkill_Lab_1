@@ -15,7 +15,6 @@ public class Task5 {
                     k--;
                 }
             }
-            
         }
     }
 }

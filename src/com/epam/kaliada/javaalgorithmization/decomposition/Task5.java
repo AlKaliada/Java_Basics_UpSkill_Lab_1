@@ -13,7 +13,7 @@ public class Task5 {
         //1-й способ
         int indexMaxElement = findIndexMaxElement(array);
         int max = array[indexMaxElement];
-        array[indexMaxElement] = -2_147_483_648;
+        array[indexMaxElement] = Integer.MIN_VALUE;
         System.out.println(array[findIndexMaxElement(array)]);
         array[indexMaxElement] = max;
 

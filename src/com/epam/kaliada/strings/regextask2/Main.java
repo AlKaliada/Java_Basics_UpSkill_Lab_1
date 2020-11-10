@@ -21,7 +21,7 @@ public class Main {
                 "</notes>";
 
         NotepadXml notepadXml = new NotepadXml();
-        notepadXml.parsingXmlDocument(stringXml);
+        notepadXml.parsingXMLDocument(stringXml);
         System.out.println(Arrays.deepToString(notepadXml.getNodes()));
     }
 }

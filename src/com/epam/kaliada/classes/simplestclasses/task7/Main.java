@@ -3,6 +3,5 @@ package com.epam.kaliada.classes.simplestclasses.task7;
 // вычисления площади, периметра и точки пересечения медиан.
 public class Main {
     public static void main(String[] args) {
-
     }
 }

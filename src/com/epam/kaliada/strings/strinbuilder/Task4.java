@@ -7,7 +7,6 @@ public class Task4 {
         String cake = new String();
         for (int i = 0; i < cakeCharArray.length; i++) {
             int indexOfLetter = informatics.indexOf(cakeCharArray[i]);
-            char letter = informatics.charAt(indexOfLetter);
             cake += informatics.substring(indexOfLetter, (indexOfLetter + 1));
         }
         System.out.println(cake);

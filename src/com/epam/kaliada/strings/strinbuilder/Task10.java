@@ -3,7 +3,7 @@ package com.epam.kaliada.strings.strinbuilder;
 // восклицательным или вопросительным знаком. Определить количество предложений в строке X.
 public class Task10 {
     public static void countSentencesInString(String string){
-        if (string.length() == 0){
+        if (string == null){
             System.out.println("You entered an empty string");
             return;
         }

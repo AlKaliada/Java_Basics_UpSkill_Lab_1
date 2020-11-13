@@ -36,12 +36,12 @@ public class Main {
 //            Task8.findLongestWord(task8);
 
             //Task9
-//            String task9 = "The GrRatest фыфыЙЦ";
-//            Task9.countLowercaseAndUppercaseLetters(task9);
+            String task9 = "The GrRatest фыфыЙЦ";
+            Task9.countLowercaseAndUppercaseLetters(task9);
 
             //Task10
-            String task10 = "Если оба типа совместимы! их преобразование. Например? значение типа byte.";
-            Task10.countSentencesInString(task10);
+//            String task10 = "Если оба типа совместимы! их преобразование. Например? значение типа byte.";
+//            Task10.countSentencesInString(task10);
 
 
         }catch (IllegalArgumentException e){

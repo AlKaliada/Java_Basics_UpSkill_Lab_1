@@ -8,6 +8,8 @@ public class Country {
     private List<Region> regions;
     private City capital;
 
+
+
     public Country(String name, List<Region> regions, City capital) {
         this.name = name;
         this.regions = regions;

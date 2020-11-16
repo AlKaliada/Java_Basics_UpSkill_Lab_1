@@ -21,6 +21,12 @@ public class NotepadTrains {
         }
     }
 
+    public Train[] sortTrainsByDestination(){
+        Train[] copy = trains.clone();
+        Arrays.sort(copy);
+        return copy;
+    }
+
     public Train[] sortTrainsByNumber(){
         Train[] copy = trains.clone();
         int trains = 0;
@@ -46,33 +52,33 @@ public class NotepadTrains {
         }
         throw new IllegalArgumentException("Train with number " + numberOfTrain + " not found");
     }
-    public Train[] sortTrainsByDestination(){
-        Train[] copy = trains.clone();
+//    public Train[] sortTrainsByDestination(){
+//        Train[] copy = trains.clone();
+//
+//        boolean sorted = false;
+//        while (!sorted){
+//            sorted = true;
+//            for (int i = 0; i < (copy.length - 1); i++) {
+//                if (!checkTwoWordsSortedAlphabetically(copy[i].getDestination(), copy[i + 1].getDestination())){
+//                    sorted = false;
+//                    Train train = copy[i];
+//                    copy[i] = copy[i + 1];
+//                    copy[i + 1] = train;
+//                }
+//                if (copy[i].getDestination().equals(copy[i + 1].getDestination()) && copy[i].getDepartureTime().isAfter(copy[i + 1].getDepartureTime())){
+//                    sorted = false;
+//                    Train train = copy[i];
+//                    copy[i] = copy[i + 1];
+//                    copy[i + 1] = train;
+//                }
+//            }
+//        }
+//        return copy;
+//    }
 
-        boolean sorted = false;
-        while (!sorted){
-            sorted = true;
-            for (int i = 0; i < (copy.length - 1); i++) {
-                if (!checkTwoWordsSortedAlphabetically(copy[i].getDestination(), copy[i + 1].getDestination())){
-                    sorted = false;
-                    Train train = copy[i];
-                    copy[i] = copy[i + 1];
-                    copy[i + 1] = train;
-                }
-                if (copy[i].getDestination().equals(copy[i + 1].getDestination()) && copy[i].getDepartureTime().isAfter(copy[i + 1].getDepartureTime())){
-                    sorted = false;
-                    Train train = copy[i];
-                    copy[i] = copy[i + 1];
-                    copy[i + 1] = train;
-                }
-            }
-        }
-        return copy;
-    }
-
-    private boolean checkTwoWordsSortedAlphabetically(String first, String second){
-        String[] strArray = {first.toLowerCase(), second.toLowerCase()};
-        Arrays.sort(strArray);
-        return first.toLowerCase().equals(strArray[0]);
-    }
+//    private boolean checkTwoWordsSortedAlphabetically(String first, String second){
+//        String[] strArray = {first.toLowerCase(), second.toLowerCase()};
+//        Arrays.sort(strArray);
+//        return first.toLowerCase().equals(strArray[0]);
+//    }
 }

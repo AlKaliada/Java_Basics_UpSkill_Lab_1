@@ -1,6 +1,6 @@
 package com.epam.kaliada.classes.simplestclasses.task8;
 
-public class Customer {
+public class Customer implements Comparable<Customer>{
     private int id;
     private String name;
     private String address;
@@ -53,6 +53,11 @@ public class Customer {
 
     public String getBankAccountNumber() {
         return bankAccountNumber;
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        return this.getName().toLowerCase().compareTo(o.getName().toLowerCase());
     }
 
     @Override

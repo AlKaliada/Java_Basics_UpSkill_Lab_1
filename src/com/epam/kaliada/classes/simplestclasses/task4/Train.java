@@ -3,7 +3,7 @@ package com.epam.kaliada.classes.simplestclasses.task4;
 
 import java.time.LocalTime;
 
-public class Train {
+public class Train implements Comparable<Train>{
     private String destination;
     private int trainNumber;
     private LocalTime departureTime;
@@ -36,5 +36,14 @@ public class Train {
 
     public LocalTime getDepartureTime() {
         return departureTime;
+    }
+
+    @Override
+    public int compareTo(Train o) {
+        int result = this.getDestination().compareTo(o.getDestination());
+        if (result == 0){
+            result = this.getDepartureTime().compareTo(o.getDepartureTime());
+        }
+        return result;
     }
 }

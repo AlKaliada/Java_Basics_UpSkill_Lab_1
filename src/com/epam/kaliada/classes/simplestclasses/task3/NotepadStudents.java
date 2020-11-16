@@ -10,7 +10,7 @@ public class NotepadStudents {
     }
 
     public void addStudent(String lastnameAndInitials, int numberOfGroup){
-        if (lastnameAndInitials == null || numberOfGroup < 1){
+        if (lastnameAndInitials == null || lastnameAndInitials.length() == 0 || numberOfGroup < 1){
             System.out.println("You entered wrong data");
             return;
         }
@@ -24,7 +24,7 @@ public class NotepadStudents {
     }
 
     public void addStudentMark(String lastnameAndInitials, int numberOfGroup, int subjectNumber, int mark){
-        if (lastnameAndInitials == null || numberOfGroup < 1){
+        if (lastnameAndInitials == null || lastnameAndInitials.length() == 0 || numberOfGroup < 1){
             System.out.println("You didn't enter student's lastname and initials");
             return;
         }

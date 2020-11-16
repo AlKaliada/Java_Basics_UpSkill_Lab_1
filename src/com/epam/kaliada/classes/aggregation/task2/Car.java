@@ -23,16 +23,32 @@ public class Car {
         return wheel;
     }
 
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
+    }
+
     public Engine getEngine() {
         return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public int getCurrentFuelVolume() {
         return currentFuelVolume;
     }
 
+    public void setCurrentFuelVolume(int currentFuelVolume) {
+        this.currentFuelVolume = currentFuelVolume;
+    }
+
     public int getMaxFuelVolume() {
         return maxFuelVolume;
+    }
+
+    public void setEngineRunning(boolean engineRunning) {
+        this.engineRunning = engineRunning;
     }
 
     public boolean isEngineRunning() {

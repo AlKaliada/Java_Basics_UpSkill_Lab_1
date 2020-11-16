@@ -23,11 +23,10 @@ public class Main {
             Plane plane2 = new Plane(PlaneProducer.BOEING, "747");
             Plane plane3 = new Plane(PlaneProducer.BOEING, "787");
 
-            AirlineCreator airlineCreator = new AirlineCreator();
-            Airline airline = airlineCreator.createAirline("Moscow", "FR2365", plane1, "13:56", "monday", "friday");
-            Airline airline1 = airlineCreator.createAirline("Moscow", "TR6532", plane2, "17:44", "tuesday", "wednesday");
-            Airline airline2 = airlineCreator.createAirline("Stockholm", "GF9812", plane3, "22:01", "wednesday", "sunday");
-            Airline airline3 = airlineCreator.createAirline("Kyiv", "JK3478", plane2, "08:15", "tuesday", "friday");
+            Airline airline = AirlineCreator.createAirline("Moscow", "FR2365", plane1, "13:56", "monday", "friday");
+            Airline airline1 = AirlineCreator.createAirline("Moscow", "TR6532", plane2, "17:44", "tuesday", "wednesday");
+            Airline airline2 = AirlineCreator.createAirline("Stockholm", "GF9812", plane3, "22:01", "wednesday", "sunday");
+            Airline airline3 = AirlineCreator.createAirline("Kyiv", "JK3478", plane2, "08:15", "tuesday", "friday");
 
             NotepadAirlines notepadAirlines = new NotepadAirlines(airline, airline1, airline2, airline3);
 

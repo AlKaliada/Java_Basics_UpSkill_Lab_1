@@ -3,7 +3,7 @@ package com.epam.kaliada.classes.simplestclasses.task10;
 import java.time.LocalTime;
 
 public class AirlineCreator {
-    public Airline createAirline(String destination, String flightNumber, Plane plane, String departureTime, String...daysOfWeeks) {
+    public static Airline createAirline(String destination, String flightNumber, Plane plane, String departureTime, String...daysOfWeeks) {
         if (destination == null || flightNumber == null || departureTime == null || daysOfWeeks == null
         || destination.length() == 0 || flightNumber.length() == 0 || departureTime.length() == 0 || daysOfWeeks.length == 0){
             throw new IllegalArgumentException("You entered wrong data");

@@ -23,7 +23,7 @@ public class Main {
 
             String time3 = "07:00";
             LocalTime localTime3 = LocalTime.parse(time3);
-            notepadTrains.addTrain("Minsk",5, localTime3);
+            notepadTrains.addTrain("minsk",5, localTime3);
 
             String time4 = "20:02";
             LocalTime localTime4 = LocalTime.parse(time4);

@@ -11,7 +11,7 @@ public class CustomerCreator {
             throw new IllegalArgumentException("You entered wrong credit card number");
         }
         if (!bankAccountNumber.matches("[A-Z]{2}\\d{2}[A-Z]{4}\\d{20}")){
-            throw new IllegalArgumentException("You entered wrong bankAccountNumber or null");
+            throw new IllegalArgumentException("You entered wrong bankAccountNumber");
         }
         countCustomers++;
         return new Customer(countCustomers, name, address, creditCardNumber, bankAccountNumber);

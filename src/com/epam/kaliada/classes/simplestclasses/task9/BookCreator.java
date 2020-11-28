@@ -10,14 +10,13 @@ public class BookCreator {
     Calendar calendar = new GregorianCalendar();
     private int year = calendar.get(Calendar.YEAR);
 
-    public Book createBook(String name, String publishingHouse, int publishingYear, int numberOfPages, double price, String bindingType, String...authors){
-        if (name == null || publishingHouse == null || bindingType == null || authors == null ||
+    public Book createBook(String name, String publishingHouse, int publishingYear, int numberOfPages, double price, Bookbinding bookbinding, String...authors){
+        if (name == null || publishingHouse == null || bookbinding == null || authors == null ||
                 name.length() == 0 || publishingHouse.length() == 0 || publishingYear < 0 || publishingYear > year ||
                  numberOfPages <= 0 || price <= 0 || authors.length == 0){
             throw new IllegalArgumentException("You entered wrong data");
         }
-        bindingType = bindingType.toUpperCase().trim().replaceAll(" ", "_");
-        Bookbinding bookbinding = Bookbinding.valueOf(bindingType);
+
         for (int i = 0; i < authors.length; i++) {
             if (authors[i] == null || authors[i].length() == 0){
                 throw new IllegalArgumentException("You entered wrong data");

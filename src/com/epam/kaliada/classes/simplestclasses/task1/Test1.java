@@ -28,4 +28,12 @@ public class Test1 {
     public int getB() {
         return b;
     }
+
+    @Override
+    public String toString() {
+        return "Test1{" +
+                "a=" + a +
+                ", b=" + b +
+                '}';
+    }
 }

@@ -25,10 +25,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             BookCreator bookCreator = new BookCreator();
-            Book book1 = bookCreator.createBook("Kalasy", "Polymia", 2020, 444, 20.758, "hardcover", "Karatkevich");
-            Book book2 = bookCreator.createBook("Philosovia Java", "SPb", 2019, 1168, 70.65, "punch and bind", "Eckel");
-            Book book3 = bookCreator.createBook("Library", "Dialectica", 2020, 976, 46, "hardcover", "Horsman", "Kornel");
-            Book book4 = bookCreator.createBook("Programing", "Polymia", 2015, 700, 74.4, "hardcover", "Blinou", "Eckel");
+            Book book1 = bookCreator.createBook("Kalasy", "Polymia", 2020, 444, 20.758, Bookbinding.HARDCOVER, "Karatkevich");
+            Book book2 = bookCreator.createBook("Philosovia Java", "SPb", 2019, 1168, 70.65, Bookbinding.PUNCH_AND_BIND, "Eckel");
+            Book book3 = bookCreator.createBook("Library", "Dialectica", 2020, 976, 46, Bookbinding.HARDCOVER, "Horsman", "Kornel");
+            Book book4 = bookCreator.createBook("Programing", "Polymia", 2015, 700, 74.4, Bookbinding.HARDCOVER, "Blinou", "Eckel");
 
             NotepadBooks notepadBooks = new NotepadBooks(book1, book2, book3, book4);
             List<Book> books = new ArrayList<>();

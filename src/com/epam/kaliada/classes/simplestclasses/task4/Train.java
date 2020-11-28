@@ -40,7 +40,7 @@ public class Train implements Comparable<Train>{
 
     @Override
     public int compareTo(Train o) {
-        int result = this.getDestination().compareTo(o.getDestination());
+        int result = this.getDestination().toLowerCase().compareTo(o.getDestination().toLowerCase());
         if (result == 0){
             result = this.getDepartureTime().compareTo(o.getDepartureTime());
         }

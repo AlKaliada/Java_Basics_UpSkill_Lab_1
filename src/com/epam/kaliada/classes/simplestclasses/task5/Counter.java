@@ -12,7 +12,7 @@ public class Counter {
         if (number >= MIN && number <= MAX){
             this.number = number;
         }else {
-            number = MIN;
+            throw new IllegalArgumentException("You entered wrong number");
         }
     }
 

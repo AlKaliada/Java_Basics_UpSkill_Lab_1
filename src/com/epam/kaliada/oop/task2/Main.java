@@ -1,5 +1,7 @@
 package com.epam.kaliada.oop.task2;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         Product apples = new Product("apple", 2.99, 7);
@@ -12,6 +14,7 @@ public class Main {
         transaction.payByCash(17);
         transaction.payByCreditCard(21.17);
         transaction.payByCreditCard();
+
 
         
     }

@@ -22,9 +22,8 @@ public class NotepadTrains {
     }
 
     public Train[] sortTrainsByDestination(){
-        Train[] copy = trains.clone();
-        Arrays.sort(copy);
-        return copy;
+        Arrays.sort(trains);
+        return trains;
     }
 
     public Train[] sortTrainsByNumber(){
@@ -50,7 +49,7 @@ public class NotepadTrains {
                 return trains[i];
             }
         }
-        throw new IllegalArgumentException("Train with number " + numberOfTrain + " not found");
+        return null;
     }
 //    public Train[] sortTrainsByDestination(){
 //        Train[] copy = trains.clone();

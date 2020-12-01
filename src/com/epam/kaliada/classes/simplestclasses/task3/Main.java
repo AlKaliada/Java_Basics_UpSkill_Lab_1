@@ -27,6 +27,6 @@ public class Main {
         notepadStudents.addStudentMark("Lulu A.G.", 3, 1, 1);
         notepadStudents.addStudentMark("Kara Y.H.", 3, 2, 1);
         notepadStudents.addStudentMark("Hrenin V.G.", 3, 4, 2);
-        System.out.println(notepadStudents.findExcellentStudents());
+        System.out.println(notepadStudents.namesAndGroupsOfExcellentStudentsToString());
     }
 }

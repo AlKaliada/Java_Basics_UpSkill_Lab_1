@@ -4,6 +4,10 @@ package com.epam.kaliada.classes.simplestclasses.task3;
 public class NotepadStudents {
     private Student[] students;
     private int numberOfStudents;
+    private final static int MIN_MARK = 1;
+    private final static int MAX_MARK = 10;
+    private final static int MIN_SUBJECT_NUMBER = 1;
+    private final static int MAX_SUBJECT_NUMBER = 5;
 
     public NotepadStudents() {
         students = new Student[10];
@@ -28,11 +32,11 @@ public class NotepadStudents {
             System.out.println("You didn't enter student's lastname and initials");
             return;
         }
-        if (subjectNumber < 1 || subjectNumber > 5){
+        if (subjectNumber < MIN_SUBJECT_NUMBER || subjectNumber > MAX_SUBJECT_NUMBER){
             System.out.println("You entered wrong number of subject");
             return;
         }
-        if (mark < 1 || mark > 10){
+        if (mark < MIN_MARK || mark > MAX_MARK){
             System.out.println("You entered wrong mark");
             return;
         }
@@ -50,15 +54,15 @@ public class NotepadStudents {
             i++;
         }
     }
-    public String findExcellentStudents(){
+    public String namesAndGroupsOfExcellentStudentsToString(){
         String listOfExcellentStudents = new String();
         for (int i = 0; i < students.length; i++) {
             int countExcellentMarks = 0;
             int countOtherMarks = 0;
-            for (int j = 0; j < 5; j++) {
-                if (students[i].getMarks()[j] == 9 || students[i].getMarks()[j] == 10){
+            for (int j = 0; j < MAX_SUBJECT_NUMBER; j++) {
+                if (students[i].getMarks()[j] == 9 || students[i].getMarks()[j] == MAX_MARK){
                     countExcellentMarks++;
-                }else if (students[i].getMarks()[j] > 0 && students[i].getMarks()[j] < 9){
+                }else if (students[i].getMarks()[j] >= MIN_MARK && students[i].getMarks()[j] < 9){
                     countOtherMarks++;
                 }
             }

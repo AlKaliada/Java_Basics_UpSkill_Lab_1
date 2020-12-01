@@ -1,17 +1,28 @@
 package com.epam.kaliada.oop.task2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Payment {
-    double totalPrice;
-    int totalQuantity;
+    private double totalPrice;
+    private int totalQuantity;
+    private List<String> products = new ArrayList<>();
 
-    public class Toys {
+    public class Product {
+        private String product;
+        private int quantity;
+        private double price;
 
-        final double price = 23.45;
+        public Product(String product, int quantity, double price) {
+            this.product = product;
+            this.quantity = quantity;
+            this.price = price;
+        }
 
-        public Toys(int quantity) {
+        public void addProductForPayment(){
+            products.add(product);
             totalQuantity += quantity;
             totalPrice += quantity * price;
         }
-
     }
 }

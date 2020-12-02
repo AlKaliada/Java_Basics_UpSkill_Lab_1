@@ -7,5 +7,7 @@ import java.util.regex.Pattern;
 // Реализовать возможность просмотра сокровищ, выбора самого дорогого по стоимости сокровища и выбора сокровищ на заданную сумму.
 public class Main {
     public static void main(String[] args) {
+       ConsoleApplicationStarter starter = new ConsoleApplicationStarter();
+       starter.startApplication();
     }
 }

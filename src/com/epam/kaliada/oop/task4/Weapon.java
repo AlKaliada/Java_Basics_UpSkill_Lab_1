@@ -1,6 +1,6 @@
 package com.epam.kaliada.oop.task4;
 
-public class Weapon extends Treasure{
+public class Weapon extends Treasure {
     private WeaponType weaponType;
 
     public Weapon(String name, double value, String description, WeaponType weaponType) {
@@ -18,6 +18,6 @@ public class Weapon extends Treasure{
 
     @Override
     public String toString() {
-        return super.toString() + " " + weaponType;
+        return super.toString() + "; weapon type- " + weaponType.toString().toLowerCase();
     }
 }

@@ -18,6 +18,6 @@ public class Gold extends Treasure{
 
     @Override
     public String toString() {
-        return super.toString() + " " + goldContent;
+        return super.toString() + "; gold content- " + goldContent;
     }
 }

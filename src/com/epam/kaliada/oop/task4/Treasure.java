@@ -1,6 +1,6 @@
 package com.epam.kaliada.oop.task4;
 
-public abstract class Treasure {
+public abstract class Treasure implements Comparable<Treasure>{
     private String name;
     private double value;
     private String description;
@@ -36,7 +36,12 @@ public abstract class Treasure {
     }
 
     @Override
+    public int compareTo(Treasure o) {
+        return Double.compare(this.value, o.value);
+    }
+
+    @Override
     public String toString() {
-        return name + " " + value + " " + description;
+        return "name- " + name + "; value- " + value + "; description- " + description;
     }
 }

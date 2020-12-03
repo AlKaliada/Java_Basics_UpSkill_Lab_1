@@ -1,0 +1,22 @@
+Gold_piastres_43.23_Jack's cursed treasure_999
+Gold_piastres_543.00_unknown treasure_958
+Gold_ingots_87.00_Kolchak gold_916
+Gold_ingots_654.00_gold reserves of Belarus_999
+Gold_ingots_654.00_bank of england gold_999
+Gold_coins_15487.00_Masonic lodge gold_958
+Gold_rings_785.45_rings of omnipotence_999
+Gold_different gold things_457.78_elfian gold_916
+Gold_ring_999999.98_Lord of the ring_958
+Gold_rings_2839.32_Others ring_999
+Gems_African star_7382.43_Brilliant from scepter of England king_brilliants_530.2
+Gems_Great Mahol_354.34_Pressent to Ekaterina II from Orlov_brilliants_199.6
+Gems_Shah_233.3_was found in India in XV century_brilliants_88.7
+Gems_Sacred Emerald Buddha_2312.23_Brilliant with Buddha_brilliants_2620
+Gems_Dragon blood_548.6_Red emerald_emeralds_45.5
+Gems_star of ocean_323.4_The biggest pearl_pearl_45.76
+Gems_sun of Africa_231.5_Beatifull amethyst_amethyst_124.98
+Weapon_death of tiran_1243.8_The gun that killed Lincholn_firearms
+Weapon_retribution_2020_the rifle that gave freedom to Belarusians_firearms
+Weapon_dearth of tiran_1214.34_The knife that killed Cesar_steel arms
+Weapon_voice of freedom_2163.76_saber of Kostiushko_steel arms
+Weapon_moon helmet_2424.23_Elfian helmet_armor

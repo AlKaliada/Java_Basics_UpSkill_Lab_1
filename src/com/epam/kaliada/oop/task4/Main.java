@@ -10,4 +10,5 @@ public class Main {
        ConsoleApplicationStarter starter = new ConsoleApplicationStarter();
        starter.startApplication();
     }
+
 }

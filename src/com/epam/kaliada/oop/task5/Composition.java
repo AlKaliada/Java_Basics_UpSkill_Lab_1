@@ -82,7 +82,7 @@ public class Composition {
         if (!flowers.equals(composition.flowers)) return false;
         if (!packaging.equals(composition.packaging)) return false;
         if (price != composition.price) return false;
-        return true;
+        return decorations != null ? decorations.equals(composition.decorations) : composition.decorations == null;
     }
 
     @Override
@@ -90,6 +90,7 @@ public class Composition {
         int result = (int) price;
         result = 31 * result + (packaging != null ? packaging.hashCode() : 0);
         result = 31 * result + (flowers != null ? flowers.hashCode() : 0);
+        result = 31 * result + (decorations != null ? decorations.hashCode() : 0);
         return result;
     }
 }

@@ -14,5 +14,6 @@ public class Main {
         textFile.deleteTextFile();
         textFile.createTextFile();
         textFile.renameTextFile("new");
+
     }
 }

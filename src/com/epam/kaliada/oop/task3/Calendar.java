@@ -63,6 +63,9 @@ public class Calendar {
     }
 
     public void removeHoliday(String name){
+        if (name == null){
+            throw new IllegalArgumentException("Name is null");
+        }
         for (Holiday holiday : holidays) {
             if (holiday.getName().equals(name)){
                 holidays.remove(holiday);
@@ -76,6 +79,9 @@ public class Calendar {
         private String name;
 
         public Holiday(LocalDate localDate, String name) {
+            if (name == null){
+                throw new IllegalArgumentException("Name is null");
+            }
             this.localDate = localDate;
             this.name = name;
         }
@@ -93,6 +99,9 @@ public class Calendar {
         }
 
         public void setName(String name) {
+            if (name == null){
+                throw new IllegalArgumentException("Name is null");
+            }
             this.name = name;
         }
 

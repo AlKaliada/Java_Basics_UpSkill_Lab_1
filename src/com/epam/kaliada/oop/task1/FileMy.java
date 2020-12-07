@@ -6,8 +6,13 @@ public class FileMy {
     private String text;
 
     public FileMy(String name, String text) {
-        this.name = name;
-        this.text = text;
+        if (name.matches("[^<>:\\/|?*]+[^<>:\\/|?*.\\s]")){
+            this.name = name;
+            this.text = text;
+        }else {
+            throw new IllegalArgumentException("No valid file name (prohibited symbols < > : \\ / | ? * and . and space in the end)");
+        }
+
     }
 
     public String getName() {

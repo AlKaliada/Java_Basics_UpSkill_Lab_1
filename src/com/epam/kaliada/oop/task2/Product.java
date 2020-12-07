@@ -6,8 +6,8 @@ public class Product {
     private int quantity;
 
     public Product(String name, double price, int quantity) {
-        if (name == null){
-            throw new IllegalArgumentException("Name of product is null");
+        if (name == null || quantity < 1 || price <= 0){
+            throw new IllegalArgumentException("No valid data");
         }
         this.name = name;
         this.price = price;

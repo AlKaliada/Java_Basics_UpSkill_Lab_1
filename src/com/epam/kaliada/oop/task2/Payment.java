@@ -30,6 +30,9 @@ public class Payment {
         }
 
         public void payByCash(double money){
+            if (money <= 0){
+                throw new IllegalArgumentException("No valid data");
+            }
             if ((amountToPay - money) >= 0.0){
                 System.out.println("Payed " + money);
                 amountToPay -= money;
@@ -45,6 +48,9 @@ public class Payment {
         }
 
         public void payByCreditCard(double money){
+            if (money <= 0){
+                throw new IllegalArgumentException("No valid data");
+            }
             if ((amountToPay - money) >= 0.0){
                 System.out.println("Payed " + money);
                 amountToPay -= money;

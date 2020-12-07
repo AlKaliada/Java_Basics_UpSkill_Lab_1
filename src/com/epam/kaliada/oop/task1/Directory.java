@@ -10,7 +10,12 @@ public class Directory {
     private String directory;
 
     public Directory(String directory) {
-        this.directory = directory;
+        if (directory.matches("[^<>:\\|?*]+[^<>:\\|?*.\\s]")){
+            this.directory = directory;
+        }else {
+            throw new IllegalArgumentException("No valid name of directory (prohibited symbols < > : \\ | ? * and . and space in the end)");
+        }
+
         try {
             Files.createDirectories(Paths.get(directory));
         } catch (IOException e) {

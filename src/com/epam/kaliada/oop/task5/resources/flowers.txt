@@ -1,0 +1,7 @@
+Rose 5.5 99
+Chamomile 3 200
+Lilies 4.3 150
+Carnation 3.7 20
+Gerberas 4.2 67
+Dandelions 1 204
+Tulips 1.4 59

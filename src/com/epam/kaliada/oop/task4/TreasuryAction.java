@@ -1,5 +1,7 @@
 package com.epam.kaliada.oop.task4;
 
+import com.epam.kaliada.oop.task4.treasures.Treasure;
+
 import java.util.*;
 
 public class TreasuryAction {

@@ -1,6 +1,6 @@
-package com.epam.kaliada.oop.task4;
+package com.epam.kaliada.oop.task4.treasures;
 
-public class Gold extends Treasure{
+public class Gold extends Treasure {
     private int goldContent;
 
     public Gold(String name, double value, String description, int goldContent) {

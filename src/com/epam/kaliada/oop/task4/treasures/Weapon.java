@@ -1,4 +1,4 @@
-package com.epam.kaliada.oop.task4;
+package com.epam.kaliada.oop.task4.treasures;
 
 public class Weapon extends Treasure {
     private WeaponType weaponType;

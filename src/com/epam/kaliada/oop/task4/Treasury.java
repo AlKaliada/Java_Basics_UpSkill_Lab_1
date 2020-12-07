@@ -1,5 +1,7 @@
 package com.epam.kaliada.oop.task4;
 
+import com.epam.kaliada.oop.task4.treasures.*;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

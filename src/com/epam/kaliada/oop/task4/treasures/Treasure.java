@@ -1,4 +1,4 @@
-package com.epam.kaliada.oop.task4;
+package com.epam.kaliada.oop.task4.treasures;
 
 public abstract class Treasure implements Comparable<Treasure>{
     private String name;

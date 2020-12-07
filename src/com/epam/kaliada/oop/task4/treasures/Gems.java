@@ -1,6 +1,6 @@
-package com.epam.kaliada.oop.task4;
+package com.epam.kaliada.oop.task4.treasures;
 
-public class Gems extends Treasure{
+public class Gems extends Treasure {
     private GemsType gemsType;
     private double carats;
 

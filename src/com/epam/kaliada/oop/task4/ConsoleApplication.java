@@ -12,7 +12,7 @@ public class ConsoleApplication {
             "4.Leave the treasury.";
     public void startApplication(){
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
-            Treasury treasury = new Treasury("data/Treasure.txt");
+            Treasury treasury = new Treasury("src/com/epam/kaliada/oop/task4/resources/Treasure.txt");
             String choice = new String();
             do {
                 System.out.println(menu);

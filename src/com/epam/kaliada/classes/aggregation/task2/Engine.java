@@ -5,8 +5,13 @@ public class Engine {
     private final int power;
 
     public Engine(String brand, int power) {
-        this.brand = brand;
-        this.power = power;
+        if (power > 0){
+            this.brand = brand;
+            this.power = power;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public String getBrand() {

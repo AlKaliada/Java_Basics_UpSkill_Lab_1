@@ -21,7 +21,7 @@ public class TimeCreator {
     }
     public Time changeTimeByMinutes(Time time, int minutes){
         int modifiedMinutes = Math.max(time.getMinutes() + minutes, 0);
-        if (modifiedMinutes >= 60){
+        if (modifiedMinutes >= MINUTES_IN_HOUR){
             time.setHours(time.getHours() + modifiedMinutes / MINUTES_IN_HOUR);
             time.setMinutes(modifiedMinutes % MINUTES_IN_HOUR);
         }else {
@@ -31,10 +31,10 @@ public class TimeCreator {
     }
     public Time changeTimeBySeconds(Time time, int seconds){
         int modifiedSeconds = Math.max(time.getSeconds() + seconds, 0);
-        if (modifiedSeconds >= 60){
+        if (modifiedSeconds >= SECONDS_IN_MINUTE){
             time.setMinutes(time.getMinutes() + modifiedSeconds / SECONDS_IN_MINUTE);
             time.setSeconds(modifiedSeconds % SECONDS_IN_MINUTE);
-            if (time.getMinutes() >= 60){
+            if (time.getMinutes() >= MINUTES_IN_HOUR){
                 time.setHours(time.getHours() + time.getMinutes()/ MINUTES_IN_HOUR);
                 time.setMinutes(time.getMinutes() % MINUTES_IN_HOUR);
             }

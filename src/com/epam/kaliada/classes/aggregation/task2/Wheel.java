@@ -5,8 +5,13 @@ public class Wheel {
     private final double size;
 
     public Wheel(String brand, double size) {
-        this.brand = brand;
-        this.size = size;
+        if (size > 0 && size <= 63){
+            this.brand = brand;
+            this.size = size;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public String getBrand() {

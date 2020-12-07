@@ -2,6 +2,9 @@ package com.epam.kaliada.classes.simplestclasses.task7;
 
 public class TriangleCreator {
     public Triangle createTriangle(double[] a, double[] b, double[] c){
+        if (a == null || b == null || c == null || a.length != 2 || b.length !=2 || c.length != 2){
+            throw new IllegalArgumentException("You entered wrong data");
+        }
         if (isTriangleExist(a, b, c)){
             return new Triangle(a, b, c);
         }else {

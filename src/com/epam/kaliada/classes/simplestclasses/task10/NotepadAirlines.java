@@ -37,7 +37,7 @@ public class NotepadAirlines {
             throw new IllegalArgumentException("You entered null or empty day of week");
         }
         List<Airline> airlinesResult = new ArrayList<>();
-        DaysOfWeek day = DaysOfWeek.valueOf(dayOfWeek.toUpperCase().trim());
+        DayOfWeek day = DayOfWeek.valueOf(dayOfWeek.toUpperCase().trim());
         for (int i = 0; i < airlines.length; i++) {
             for (int j = 0; j < airlines[i].getDaysOfWeeks().length; j++) {
                 if (airlines[i].getDaysOfWeeks()[j] == day){
@@ -53,7 +53,7 @@ public class NotepadAirlines {
         if (dayOfWeek == null || dayOfWeek.length() == 0){
             throw new IllegalArgumentException("You entered null or empty day of week");
         }
-        DaysOfWeek day = DaysOfWeek.valueOf(dayOfWeek.toUpperCase().trim());
+        DayOfWeek day = DayOfWeek.valueOf(dayOfWeek.toUpperCase().trim());
         List<Airline> airlinesResult = new ArrayList<>();
         for (int i = 0; i < airlines.length; i++) {
             for (int j = 0; j < airlines[i].getDaysOfWeeks().length; j++) {

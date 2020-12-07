@@ -10,10 +10,15 @@ public class District {
     private City capital;
 
     public District(String name, double square, List<City> cities, City capital) {
-        this.name = name;
-        this.square = square;
-        this.cities = cities;
-        this.capital = capital;
+        if (square > 0){
+            this.name = name;
+            this.square = square;
+            this.cities = cities;
+            this.capital = capital;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public String getName() {
@@ -29,7 +34,12 @@ public class District {
     }
 
     public void setSquare(double square) {
-        this.square = square;
+        if (square > 0){
+            this.square = square;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public List<City> getCities() {

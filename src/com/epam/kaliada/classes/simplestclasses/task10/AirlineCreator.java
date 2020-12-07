@@ -20,9 +20,9 @@ public class AirlineCreator {
                 daysOfWeeks[i] = daysOfWeeks[i].toUpperCase().trim();
             }
         }
-        DaysOfWeek[] days = new DaysOfWeek[daysOfWeeks.length];
+        DayOfWeek[] days = new DayOfWeek[daysOfWeeks.length];
         for (int i = 0; i < days.length; i++) {
-            days[i] = DaysOfWeek.valueOf(daysOfWeeks[i]);
+            days[i] = DayOfWeek.valueOf(daysOfWeeks[i]);
         }
         return new Airline(destination, flightNumber, plane, departureTime, days);
     }

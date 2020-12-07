@@ -8,9 +8,14 @@ public class City {
     private double square;
 
     public City(String name, int population, double square) {
-        this.name = name;
-        this.population = population;
-        this.square = square;
+        if (population > 0 && square > 0){
+            this.name = name;
+            this.population = population;
+            this.square = square;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public String getName() {
@@ -26,7 +31,12 @@ public class City {
     }
 
     public void setPopulation(int population) {
-        this.population = population;
+        if (population > 0){
+            this.population = population;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public double getSquare() {
@@ -34,7 +44,12 @@ public class City {
     }
 
     public void setSquare(double square) {
-        this.square = square;
+        if (square > 0){
+            this.square = square;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     @Override

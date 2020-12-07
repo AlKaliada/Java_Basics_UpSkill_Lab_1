@@ -1,6 +1,7 @@
 package com.epam.kaliada.classes.aggregation.task2;
 
 public class Car {
+    private static final int MIN_FUEL_VOLUME = 0;
     private final String brand;
     private Wheel wheel;
     private Engine engine;
@@ -8,11 +9,17 @@ public class Car {
     private final int maxFuelVolume;
     private boolean engineRunning;
 
+
     public Car(String brand, Wheel wheel, Engine engine, int maxFuelVolume) {
-        this.brand = brand;
-        this.wheel = wheel;
-        this.engine = engine;
-        this.maxFuelVolume = maxFuelVolume;
+        if (maxFuelVolume > 0){
+            this.brand = brand;
+            this.wheel = wheel;
+            this.engine = engine;
+            this.maxFuelVolume = maxFuelVolume;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public String getBrand() {
@@ -40,7 +47,12 @@ public class Car {
     }
 
     public void setCurrentFuelVolume(int currentFuelVolume) {
-        this.currentFuelVolume = currentFuelVolume;
+        if (currentFuelVolume >= 0){
+            this.currentFuelVolume = currentFuelVolume;
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 
     public int getMaxFuelVolume() {
@@ -59,12 +71,22 @@ public class Car {
         System.out.println(brand);
     }
     public void drive(){
-        engineRunning = true;
+        if (currentFuelVolume > MIN_FUEL_VOLUME){
+            engineRunning = true;
+        }else {
+            System.out.println("Not enough fuel");
+        }
+
     }
     public void changeWheel(Wheel wheel){
         this.wheel = wheel;
     }
     public void refuel(int fuel){
-        currentFuelVolume = Math.max(currentFuelVolume + fuel, maxFuelVolume);
+        if (fuel > 0){
+            currentFuelVolume = Math.max(currentFuelVolume + fuel, maxFuelVolume);
+        }else {
+            throw new IllegalArgumentException("Not valid data");
+        }
+
     }
 }

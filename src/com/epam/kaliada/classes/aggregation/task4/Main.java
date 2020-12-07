@@ -29,5 +29,10 @@ public class Main {
             System.out.println(account.toString());
         }
 
+        List<BankAccount> unknown = notepadBankAccounts.findAccountsByOwner("w");
+        for (BankAccount account : unknown) {
+            System.out.println(account.toString());
+        }
+
     }
 }

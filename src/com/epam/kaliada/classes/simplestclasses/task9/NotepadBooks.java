@@ -13,7 +13,7 @@ public class NotepadBooks {
         List<Book> booksResult = new ArrayList<>();
         for (int i = 0; i < books.length; i++) {
             for (int j = 0; j < books[i].getAuthors().length; j++) {
-                if (books[i].getAuthors()[j].toUpperCase().equals(author.toUpperCase())){
+                if (books[i].getAuthors()[j].equalsIgnoreCase(author)){
                     booksResult.add(books[i]);
                     break;
                 }
@@ -24,7 +24,7 @@ public class NotepadBooks {
     public List<Book> findBooksByPublishingHouse(String publishingHouse){
         List<Book> booksResult = new ArrayList<>();
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getPublishingHouse().toUpperCase().equals(publishingHouse.toUpperCase())){
+            if (books[i].getPublishingHouse().equalsIgnoreCase(publishingHouse)){
                 booksResult.add(books[i]);
             }
         }

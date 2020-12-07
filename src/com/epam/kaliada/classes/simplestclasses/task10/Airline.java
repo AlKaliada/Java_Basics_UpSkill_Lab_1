@@ -8,9 +8,9 @@ public class Airline {
     private String flightNumber;
     private Plane plane;
     private LocalTime departureTime;
-    private DaysOfWeek[] daysOfWeeks;
+    private DayOfWeek[] daysOfWeeks;
 
-    public Airline(String destination, String flightNumber, Plane plane, LocalTime departureTime, DaysOfWeek[] daysOfWeeks) {
+    public Airline(String destination, String flightNumber, Plane plane, LocalTime departureTime, DayOfWeek[] daysOfWeeks) {
         this.destination = destination;
         this.flightNumber = flightNumber;
         this.plane = plane;
@@ -50,11 +50,11 @@ public class Airline {
         this.departureTime = departureTime;
     }
 
-    public DaysOfWeek[] getDaysOfWeeks() {
+    public DayOfWeek[] getDaysOfWeeks() {
         return daysOfWeeks;
     }
 
-    public void setDaysOfWeeks(DaysOfWeek[] daysOfWeeks) {
+    public void setDaysOfWeeks(DayOfWeek[] daysOfWeeks) {
         this.daysOfWeeks = daysOfWeeks;
     }
 

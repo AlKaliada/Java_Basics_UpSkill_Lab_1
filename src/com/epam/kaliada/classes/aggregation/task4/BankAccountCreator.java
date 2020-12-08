@@ -1,7 +1,7 @@
 package com.epam.kaliada.classes.aggregation.task4;
 
 public class BankAccountCreator {
-    public static int accountNumber = 0;
+    public static int accountNumber;
 
     public static BankAccount createBankAccount(String ownerName, CurrencyEnum currency){
         if (ownerName == null || ownerName.length() == 0){

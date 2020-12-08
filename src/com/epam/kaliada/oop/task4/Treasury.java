@@ -13,7 +13,7 @@ public class Treasury {
     private List<Treasure> treasures;
     private String pathToTreasure;
 
-    public Treasury(String pathToTreasure) {
+    public Treasury(String pathToTreasure) throws IOException{
         this.pathToTreasure = pathToTreasure;
         fillTheTreasury();
     }
@@ -34,7 +34,7 @@ public class Treasury {
         this.pathToTreasure = pathToTreasure;
     }
 
-    private void fillTheTreasury(){
+    private void fillTheTreasury() throws IOException{
         treasures = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(pathToTreasure))){
             String line = reader.readLine();
@@ -45,9 +45,9 @@ public class Treasury {
                 line = reader.readLine();
             }
         }catch (FileNotFoundException e){
-            e.printStackTrace();
+            throw e;
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
     private Treasure treasureCreator(String[] line){

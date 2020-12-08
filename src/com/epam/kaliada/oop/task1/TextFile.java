@@ -18,53 +18,37 @@ public class TextFile {
         path = Paths.get(directory.getDirectory() + "/" + fileMy.getName() + ".txt");
     }
 
-    public void createTextFile(){
-        try {
-            if (!Files.exists(path)){
-                Files.createFile(path);
-                Files.write(path, fileMy.getText().getBytes());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void createTextFile() throws IOException{
+        if (!Files.exists(path)){
+            Files.createFile(path);
+            Files.write(path, fileMy.getText().getBytes());
         }
     }
 
-    public void renameTextFile(String name){
-        try {
-            if (Files.exists(Paths.get(directory.getDirectory() + "/" + name + ".txt"))){
-                Files.delete(Paths.get(directory.getDirectory() + "/" + name + ".txt"));
-            }
-            Files.move(path, path.resolveSibling(name + ".txt"));
-            path = Paths.get(directory.getDirectory() + "/" + name + ".txt");
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void renameTextFile(String name) throws IOException{
+        if (Files.exists(Paths.get(directory.getDirectory() + "/" + name + ".txt"))){
+            Files.delete(Paths.get(directory.getDirectory() + "/" + name + ".txt"));
+        }
+        Files.move(path, path.resolveSibling(name + ".txt"));
+        path = Paths.get(directory.getDirectory() + "/" + name + ".txt");
+    }
+
+    public void printTextFile() throws IOException{
+        List<String> list = Files.readAllLines(path);
+        for (String str : list) {
+            System.out.println(str);
         }
     }
 
-    public void printTextFile(){
-        try {
-            List<String> list = Files.readAllLines(path);
-            for (String str : list) {
-                System.out.println(str);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addTextFile(String string){
+    public void addTextFile(String string) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path.toFile(), true))){
             writer.write(string);
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
 
-    public void deleteTextFile(){
-        try {
-            Files.delete(path);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void deleteTextFile() throws IOException{
+        Files.delete(path);
     }
 }

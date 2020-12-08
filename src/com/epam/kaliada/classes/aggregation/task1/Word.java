@@ -1,7 +1,7 @@
 package com.epam.kaliada.classes.aggregation.task1;
 
 public class Word {
-    String word;
+    private String word;
 
     public Word(char...chars) {
         this.word = String.valueOf(chars);

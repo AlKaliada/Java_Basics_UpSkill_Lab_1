@@ -10,7 +10,7 @@ public class ConsoleApplication {
             "2.Look at the most expensive treasure;\n" +
             "3.look at treasures for a given amount;\n" +
             "4.Leave the treasury.";
-    public void startApplication(){
+    public void startApplication() throws IOException{
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
             Treasury treasury = new Treasury("src/com/epam/kaliada/oop/task4/resources/Treasure.txt");
             String choice = new String();
@@ -38,7 +38,7 @@ public class ConsoleApplication {
             while (!choice.equalsIgnoreCase("4"));
 
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
 

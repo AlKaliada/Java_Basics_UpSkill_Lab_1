@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ConsoleApplicationStarter {
-    public void startApplication(){
+    public void startApplication() throws IOException{
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
             System.out.println("Would your like to fill the treasury with treasures? Y/N?");
             String answer = reader.readLine();
@@ -18,7 +18,7 @@ public class ConsoleApplicationStarter {
                 consoleApplication.startApplication();
             }
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
 }

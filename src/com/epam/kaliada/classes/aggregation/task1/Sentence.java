@@ -1,7 +1,7 @@
 package com.epam.kaliada.classes.aggregation.task1;
 
 public class Sentence {
-    String sentence;
+    private String sentence;
 
     public Sentence(String sentence) {
         this.sentence = sentence;

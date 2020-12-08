@@ -8,8 +8,7 @@ public class Payment {
 
     public void addProduct(Product product){
         if (product == null){
-            System.out.println("Your product is null");
-            return;
+            throw new IllegalArgumentException("Your product is null");
         }
         products.add(product);
     }
@@ -29,34 +28,36 @@ public class Payment {
             this.amountToPay = findTheAmountToPay();
         }
 
-        public void payByCash(double money){
+        public double getAmountToPay() {
+            return amountToPay;
+        }
+
+        public double payByCash(double money){
             if (money <= 0){
                 throw new IllegalArgumentException("No valid data");
             }
             if ((amountToPay - money) >= 0.0){
-                System.out.println("Payed " + money);
                 amountToPay -= money;
-                System.out.println("Left to pay " + amountToPay);
+                return -amountToPay;
             }else {
-                System.out.println("Your change " + (money - amountToPay));
+                amountToPay = 0.0;
+                return (money - amountToPay);
             }
         }
 
         public void payByCreditCard(){
             amountToPay = 0.0;
-            System.out.println("Thanks for paying");
         }
 
-        public void payByCreditCard(double money){
+        public double payByCreditCard(double money){
             if (money <= 0){
                 throw new IllegalArgumentException("No valid data");
             }
             if ((amountToPay - money) >= 0.0){
-                System.out.println("Payed " + money);
                 amountToPay -= money;
-                System.out.println("Left to pay " + amountToPay);
+                return -amountToPay;
             }else {
-                System.out.println("You entered too much money");
+                return (money - amountToPay);
             }
         }
     }

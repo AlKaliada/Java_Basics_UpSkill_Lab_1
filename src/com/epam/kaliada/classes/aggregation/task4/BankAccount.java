@@ -38,7 +38,7 @@ public class BankAccount implements Comparable<BankAccount>{
         if (!isAccountBlocked){
             balance += amount;
         }else {
-            System.out.println("Account blocked");
+            throw new IllegalArgumentException("Account blocked");
         }
     }
     public void blockAccount(){

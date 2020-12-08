@@ -3,14 +3,13 @@ package com.epam.kaliada.oop.task5;
 import com.epam.kaliada.oop.task5.decorations.Decorations;
 import com.epam.kaliada.oop.task5.flowers.Flower;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Composition {
 
-    private final Packaging packaging;
-    private final Decorations decorations;
-    private final List<Flower> flowers;
+    private Packaging packaging;
+    private Decorations decorations;
+    private List<Flower> flowers;
     private double price;
 
     public double getPrice() {
@@ -20,7 +19,6 @@ public class Composition {
     public static class CompositionBuilder{
         private final List<Flower> flowers;
         private final Packaging packaging;
-
 
         private Decorations decorations;
         private double price;
@@ -35,7 +33,7 @@ public class Composition {
             return this;
         }
 
-        private CompositionBuilder cost(){
+        private void cost(){
             double cost = 0.0;
             for (Flower flower : flowers) {
                 cost += flower.cost();
@@ -45,19 +43,18 @@ public class Composition {
             }else {
                 price = cost + packaging.getPrice();
             }
-
-            return this;
         }
         public Composition build(){
             cost();
-            return new Composition(this);
+            Composition composition = new Composition();
+            composition.packaging = packaging;
+            composition.decorations = decorations;
+            composition.flowers = flowers;
+            composition.price = price;
+            return composition;
         }
     }
-    private Composition(CompositionBuilder compositionBuilder){
-        packaging = compositionBuilder.packaging;
-        decorations = compositionBuilder.decorations;
-        flowers = compositionBuilder.flowers;
-        price = compositionBuilder.price;
+    private Composition(){
     }
 
     @Override

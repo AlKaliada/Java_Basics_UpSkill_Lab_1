@@ -6,6 +6,11 @@ import com.epam.kaliada.oop.task5.decorations.Tape;
 public class TapeFactory implements DecorationFactory{
     @Override
     public Decoration createDecoration(int quantity) {
-        return new Tape(quantity);
+        if (quantity > 0){
+            return new Tape(quantity);
+        }else {
+            throw new IllegalArgumentException("quantity less zero");
+        }
+
     }
 }

@@ -1,11 +1,19 @@
 package com.epam.kaliada.oop.task5.decorations;
 
-public class Tape extends DecorationsDecorator{
-    private Decorations decoration;
+public class Tape extends Decoration {
     private double price = 0.7;
+    private int quantity;
 
-    public Tape(Decorations decoration) {
-        this.decoration = decoration;
+    public Tape(int count) {
+        this.quantity = count;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public void setPrice(double price) {
@@ -18,18 +26,18 @@ public class Tape extends DecorationsDecorator{
 
     @Override
     public String toString() {
-        return decoration.toString() + " tape,";
+        return super.toString() + " tape,";
     }
 
     @Override
     public double cost() {
-        return decoration.cost() + price;
+        return quantity * price;
     }
 
     @Override
     public int hashCode() {
         int result = (int) price;
-        result = 31 * result + (decoration != null ? decoration.hashCode() : 0);
+        result = 31 * result + quantity;
         return result;
     }
 
@@ -38,7 +46,7 @@ public class Tape extends DecorationsDecorator{
         if (obj == null || getClass() != obj.getClass()) return false;
         if (this == obj) return true;
         Tape tape = (Tape) obj;
-        if (!decoration.equals(tape.decoration)) return false;
+        if (quantity != tape.quantity) return false;
         return price == tape.price;
     }
 }

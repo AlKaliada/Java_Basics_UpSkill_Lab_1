@@ -1,8 +1,11 @@
 package com.epam.kaliada.oop.task5;
 
 import com.epam.kaliada.oop.task5.decorations.*;
+import com.epam.kaliada.oop.task5.decorations.factory.BerryFactory;
+import com.epam.kaliada.oop.task5.decorations.factory.DecorationFactory;
+import com.epam.kaliada.oop.task5.decorations.factory.TapeFactory;
 import com.epam.kaliada.oop.task5.flowers.Flower;
-import com.epam.kaliada.oop.task5.flowers.FlowersAction;
+import com.epam.kaliada.oop.task5.flowers.FlowerAction;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,35 +16,42 @@ import java.util.List;
 public class ConsoleApplication {
     private List<Flower> flowers = new ArrayList<>();
     private Packaging packaging;
-    private Decorations decorations;
-    private final static String questionFlower = "Would you like more flowers?";
-    private final static String yes = "yes";
-    private final static String no = "no";
-    private final static String questionDecoration = "Would you like decorations?";
+    private Decoration decorations;
+    private final static String QUESTION_FLOWER = "Would you like more flowers?";
+    private final static String YES = "yes";
+    private final static String NO = "no";
+    private final static String QUESTION_DECORATION = "Would you like decorations?";
+    private String flowerResource = "src/com/epam/kaliada/oop/task5/resources/flowers.txt";
 
-    public void startApplication(){
+    public String getFlowerResource() {
+        return flowerResource;
+    }
 
-        try {
+    public void setFlowerResource(String flowerResource) {
+        this.flowerResource = flowerResource;
+    }
+
+    public void startApplication() throws IOException{
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             chooseFlower();
-            System.out.println(questionFlower);
+            System.out.println(QUESTION_FLOWER);
             String answer = reader.readLine();
-            while (!answer.equalsIgnoreCase(no)){
-                if (answer.equalsIgnoreCase(yes)){
+            while (!answer.equalsIgnoreCase(NO)){
+                if (answer.equalsIgnoreCase(YES)){
                     chooseFlower();
                 }
-                System.out.println(questionFlower);
+                System.out.println(QUESTION_FLOWER);
                 answer = reader.readLine();
             }
             packaging = choosePackaging();
-            System.out.println(questionDecoration);
+            System.out.println(QUESTION_DECORATION);
             String answerDecor = reader.readLine();
-            while (!answerDecor.equalsIgnoreCase(yes) && !answerDecor.equalsIgnoreCase(no)){
+            while (!answerDecor.equalsIgnoreCase(YES) && !answerDecor.equalsIgnoreCase(NO)){
                 System.out.println("I didn't understand you");
-                System.out.println(questionDecoration);
+                System.out.println(QUESTION_DECORATION);
                 answerDecor = reader.readLine();
             }
-            if (answerDecor.equalsIgnoreCase(yes)){
+            if (answerDecor.equalsIgnoreCase(YES)){
                 chooseDecoration();
             }
             Composition composition = new Composition
@@ -49,86 +59,69 @@ public class ConsoleApplication {
                     .setDecorations(decorations)
                     .build();
             System.out.println(composition.toString());
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
     }
 
-    private void chooseFlower(){
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Which flowers would you like?");
-            String flowerName = reader.readLine();
-            while (!FlowersAction.checkFlowers(flowerName)){
-                System.out.println("we don't have " + flowerName + ". Try one more time");
-                flowerName = reader.readLine();
+    private void chooseFlower() throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        FlowerAction flowerAction = new FlowerAction(flowerResource);
+        System.out.println("Which flowers would you like?");
+        String flowerName = reader.readLine();
+        while (!flowerAction.checkFlowers(flowerName)){
+            System.out.println("we don't have " + flowerName + ". Try one more time");
+            flowerName = reader.readLine();
+        }
+        String quantityFlowers;
+        do {
+            System.out.println("How many " + flowerName + " would you like?");
+            quantityFlowers = reader.readLine();
+        }while (!quantityFlowers.matches("\\d"));
+        int count = Integer.parseInt(quantityFlowers);
+        Flower flower = flowerAction.createFlower(flowerName, count);
+        flowers.add(flower);
+    }
+
+    private Packaging choosePackaging() throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        while (true){
+            System.out.println("Which packaging would you like?");
+            String packagingName = reader.readLine();
+            if (packagingName.equalsIgnoreCase("basket")){
+                return Packaging.BASKET;
+            }else if (packagingName.equalsIgnoreCase("paper")){
+                return Packaging.PAPER;
+            }else if (packagingName.equalsIgnoreCase("box")){
+                return Packaging.BOX;
             }
-            System.out.println("How much " + flowerName + " would you like?");
-            int count = Integer.parseInt(reader.readLine());
-            Flower flower = FlowersAction.createFlower(flowerName, count);
-            flowers.add(flower);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    private Packaging choosePackaging(){
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            while (true){
-                System.out.println("Which packaging would you like?");
-                String packagingName = reader.readLine();
-                if (packagingName.equalsIgnoreCase("basket")){
-                    return Packaging.BASKET;
-                }else if (packagingName.equalsIgnoreCase("paper")){
-                    return Packaging.PAPER;
-                }else if (packagingName.equalsIgnoreCase("box")){
-                    return Packaging.BOX;
-                }
-                System.out.println("Sorry, we don't have " + packagingName);
+            System.out.println("Sorry, we don't have " + packagingName);
             }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        throw new RuntimeException();
     }
 
-    private void chooseDecoration(){
-        decorations = new DefaultDecoration();
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            while (true){
-                System.out.println("Which decoration would you like?");
-                String decorationName = reader.readLine();
-                switch (decorationName) {
-                    case ("Berries"):
-                        decorations = new Berries(decorations);
-                        break;
-                    case ("Butterflies"):
-                        decorations = new Butterflies(decorations);
-                        break;
-                    case ("Tape"):
-                        decorations = new Tape(decorations);
-                        break;
-                    default:
-                        System.out.println("W don't have " + decorationName);
-                }
-                System.out.println("Would you like one more decoration");
-                String answerDecor = reader.readLine();
-                while (!answerDecor.equalsIgnoreCase(yes) && !answerDecor.equalsIgnoreCase(no)){
-                    System.out.println("I didn't understand you");
-                    System.out.println(questionDecoration);
-                    answerDecor = reader.readLine();
-                }
-                if (answerDecor.equalsIgnoreCase(no)) {
-                    break;
-                }
-
+    private void chooseDecoration() throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        DecorationFactory decorationFactory = createDecorationFactory();
+        String quantityDecorations;
+        do {
+            System.out.println("How many decorations would you like?");
+            quantityDecorations = reader.readLine();
+        }while (!quantityDecorations.matches("\\d"));
+        int quantity = Integer.parseInt(quantityDecorations);
+        decorations = decorationFactory.createDecoration(quantity);
+    }
+    private DecorationFactory createDecorationFactory() throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        while (true){
+            System.out.println("Which decoration would you like?");
+            String decorationName = reader.readLine();
+            switch (decorationName) {
+                case ("Berry"):
+                    return new BerryFactory();
+                case ("Butterfly"):
+                    return new BerryFactory();
+                case ("Tape"):
+                    return new TapeFactory();
+                default:
+                    System.out.println("W don't have " + decorationName);
             }
-        }catch (IOException e){
-            e.printStackTrace();
         }
     }
-
 }

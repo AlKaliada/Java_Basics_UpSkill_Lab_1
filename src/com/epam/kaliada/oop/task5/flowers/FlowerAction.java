@@ -5,10 +5,22 @@ import com.epam.kaliada.oop.task5.flowers.Flower;
 import java.io.*;
 import java.util.regex.Pattern;
 
-public class FlowersAction {
-    private static final String flowers = "src/com/epam/kaliada/oop/task5/resources/flowers.txt";
+public class FlowerAction {
+    private String flowers;
 
-    public static Flower createFlower(String flowerName, int count){
+    public FlowerAction(String flowers) {
+        this.flowers = flowers;
+    }
+
+    public String getFlowers() {
+        return flowers;
+    }
+
+    public void setFlowers(String flowers) {
+        this.flowers = flowers;
+    }
+
+    public Flower createFlower(String flowerName, int count) throws IOException{
         String flowerString = findFlower(flowerName);
         String[] flowerArray = flowerString.split(" ");
         int restOfFlowers = Integer.parseInt(flowerArray[2]) - count;
@@ -20,7 +32,7 @@ public class FlowersAction {
 
         return new Flower(flowerArray[0], Double.parseDouble(flowerArray[1]), count);
     }
-    public static boolean checkFlowers(String flowerName){
+    public boolean checkFlowers(String flowerName) throws IOException{
         try (BufferedReader reader = new BufferedReader(new FileReader(flowers))){
             String flowerString = reader.readLine();
             while (flowerString != null){
@@ -31,11 +43,11 @@ public class FlowersAction {
                 }
             }
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
         return false;
     }
-    private static String findFlower(String flowerName){
+    private String findFlower(String flowerName) throws IOException{
         try (BufferedReader reader = new BufferedReader(new FileReader(flowers))){
             String flowerString = reader.readLine();
             while (flowerString != null){
@@ -46,12 +58,12 @@ public class FlowersAction {
                 }
             }
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
         throw new IllegalArgumentException(flowerName + " flower not found");
     }
 
-    private static String changeFlowersList(String name, int count){
+    private String changeFlowersList(String name, int count) throws IOException{
         try (BufferedReader reader = new BufferedReader(new FileReader(flowers))){
             StringBuilder flowersList = new StringBuilder();
             String line = reader.readLine();
@@ -64,18 +76,17 @@ public class FlowersAction {
             }
             return flowersList.toString();
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
-        throw new RuntimeException("couldn't read the file");
     }
-    private static void writeFlowersList(String flowersList){
+    private void writeFlowersList(String flowersList) throws IOException{
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(flowers))){
             writer.write(flowersList);
         }catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
-    private static String changeLine(String line, int count){
+    private String changeLine(String line, int count){
         String[] lineArray = line.split(" ");
         lineArray[2] = String.valueOf(count);
         return lineArray[0] + " " + lineArray[1] + " " + lineArray[2];

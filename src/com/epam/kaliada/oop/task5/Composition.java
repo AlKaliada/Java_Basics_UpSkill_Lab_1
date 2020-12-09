@@ -1,6 +1,6 @@
 package com.epam.kaliada.oop.task5;
 
-import com.epam.kaliada.oop.task5.decorations.Decorations;
+import com.epam.kaliada.oop.task5.decorations.Decoration;
 import com.epam.kaliada.oop.task5.flowers.Flower;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class Composition {
 
     private Packaging packaging;
-    private Decorations decorations;
+    private Decoration decorations;
     private List<Flower> flowers;
     private double price;
 
@@ -20,7 +20,7 @@ public class Composition {
         private final List<Flower> flowers;
         private final Packaging packaging;
 
-        private Decorations decorations;
+        private Decoration decorations;
         private double price;
 
         public CompositionBuilder(List<Flower> flowers, Packaging packaging) {
@@ -28,7 +28,7 @@ public class Composition {
             this.packaging = packaging;
         }
 
-        public CompositionBuilder setDecorations(Decorations decorations) {
+        public CompositionBuilder setDecorations(Decoration decorations) {
             this.decorations = decorations;
             return this;
         }

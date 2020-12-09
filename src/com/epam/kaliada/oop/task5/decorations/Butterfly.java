@@ -1,15 +1,21 @@
 package com.epam.kaliada.oop.task5.decorations;
 
-public class Butterflies extends DecorationsDecorator{
-    private Decorations decoration;
+public class Butterfly extends Decoration {
     private double price = 1.1;
+    private int quantity;
 
-    public Butterflies(Decorations decoration) {
-        this.decoration = decoration;
+    public Butterfly(int count) {
+        this.quantity = count;
     }
-    public Butterflies(Decorations decoration, int count){
-        this.decoration = decoration;
+
+    public int getQuantity() {
+        return quantity;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
@@ -20,18 +26,18 @@ public class Butterflies extends DecorationsDecorator{
 
     @Override
     public String toString() {
-        return decoration.toString() + " butterflies,";
+        return super.toString() + quantity + " butterflies,";
     }
 
     @Override
     public double cost() {
-        return decoration.cost() + price;
+        return quantity * price;
     }
 
     @Override
     public int hashCode() {
         int result = (int) price;
-        result = result * 31 + (decoration != null ? decoration.hashCode() : 0);
+        result = result * 31 + quantity;
         return result;
     }
 
@@ -39,8 +45,8 @@ public class Butterflies extends DecorationsDecorator{
     public boolean equals(Object obj) {
         if (obj == null || getClass() != obj.getClass()) return false;
         if (this == obj) return true;
-        Butterflies butterflies = (Butterflies) obj;
-        if (!decoration.equals(butterflies.decoration)) return false;
+        Butterfly butterflies = (Butterfly) obj;
+        if (quantity != butterflies.quantity) return false;
         return price == butterflies.price;
     }
 }

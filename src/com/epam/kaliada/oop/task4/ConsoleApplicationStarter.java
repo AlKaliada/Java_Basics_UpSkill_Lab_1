@@ -17,8 +17,6 @@ public class ConsoleApplicationStarter {
                 ConsoleApplication consoleApplication = new ConsoleApplication();
                 consoleApplication.startApplication();
             }
-        }catch (IOException e){
-            throw e;
         }
     }
 }

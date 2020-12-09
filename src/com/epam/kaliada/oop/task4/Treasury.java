@@ -44,10 +44,6 @@ public class Treasury {
                 treasures.add(treasure);
                 line = reader.readLine();
             }
-        }catch (FileNotFoundException e){
-            throw e;
-        }catch (IOException e){
-            throw e;
         }
     }
     private Treasure treasureCreator(String[] line){

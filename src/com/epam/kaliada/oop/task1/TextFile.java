@@ -43,8 +43,6 @@ public class TextFile {
     public void addTextFile(String string) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path.toFile(), true))){
             writer.write(string);
-        }catch (IOException e){
-            throw e;
         }
     }
 

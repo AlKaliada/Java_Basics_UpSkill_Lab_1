@@ -42,8 +42,6 @@ public class FlowerAction {
                     flowerString = reader.readLine();
                 }
             }
-        }catch (IOException e){
-            throw e;
         }
         return false;
     }
@@ -57,8 +55,6 @@ public class FlowerAction {
                     flowerString = reader.readLine();
                 }
             }
-        }catch (IOException e){
-            throw e;
         }
         throw new IllegalArgumentException(flowerName + " flower not found");
     }
@@ -75,15 +71,11 @@ public class FlowerAction {
                 line = reader.readLine();
             }
             return flowersList.toString();
-        }catch (IOException e){
-            throw e;
         }
     }
     private void writeFlowersList(String flowersList) throws IOException{
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(flowers))){
             writer.write(flowersList);
-        }catch (IOException e){
-            throw e;
         }
     }
     private String changeLine(String line, int count){

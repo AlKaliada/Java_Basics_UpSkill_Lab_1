@@ -37,10 +37,6 @@ public class ConsoleApplication {
             }
             while (!choice.equalsIgnoreCase("4"));
 
-        }catch (IOException e){
-            throw e;
         }
     }
-
-
 }
